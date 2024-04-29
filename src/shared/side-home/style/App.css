@@ -1,0 +1,352 @@
+.App {
+  font-size: 22px;
+  width: 100%;
+  height: max-content;
+}
+.container {
+  max-width: none;
+}
+.container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+}
+@media (max-width: 576px) {
+  .heading {
+    font-size: 24px !important;
+  }
+  .text-content{
+    font-size: 13px !important;
+  }
+  .card-text{
+    font-size: 13px !important;
+  }
+  .btn-custom {
+    font-size: 17px !important;
+  }
+  #contactUs{
+    width: 100%;
+    margin-top: 0px !important;
+  }
+  .img-coins{
+    width: 70%;
+  }
+  .img-xs {
+    max-width: 1.5rem;  
+  }
+  .fill{
+    height: auto !important;
+  }
+  .main-banner-btn-contactUs{
+    margin-top: 1rem !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .ourbenefits-download-btns {
+    font-size: 17px !important;
+    background-color: #00AB55;
+    border: 1px solid #00AB55;
+    border-radius: 24px;
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+    margin-top: 1rem;
+    padding: 0.8rem 2rem 0.8rem 2rem;
+  }
+  .contact-column {
+    line-height: 1;
+    padding-bottom: 2rem;
+  }
+  .contact-items {
+    margin-bottom: 0.4rem;
+  }
+  .main-banner-card {
+    margin: 2rem 1rem 1rem 1rem !important; 
+  }
+  .fill{
+    height: auto !important;
+  }
+  .main-banner-btn-contactUs{
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .img-md {
+    max-width: fit-content;  }
+  .main-banner-card {
+    margin: 2rem 1rem 1rem 1rem !important; 
+  }
+  .custom-text {
+    font-size: 14px; 
+    margin-top: 3rem;
+    margin-bottom: 0; 
+  }
+  .card-text{
+    font-size: 18px !important;
+  }
+  .fill{
+    height: auto !important;
+  }
+  .main-banner-btn-contactUs{
+    margin-top: 1rem;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .custom-text {
+    font-size: 14px; 
+    margin-top: 3rem;
+    margin-bottom: 0; 
+  }
+  .card-text{
+    font-size: 18px !important;
+  }
+  .fill{
+    height: auto !important;
+  }
+  .main-banner-btn-contactUs{
+    margin-top: 1rem;
+  }
+}
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  box-shadow: none;
+}
+.btn-custom {
+  background-color: #F6F6F6; 
+  color: #00AB55; 
+  font-size: 22px;
+  border: 1px solid transparent; 
+  border-radius: 24px;
+  padding-left: 32px;
+  padding-right: 32px;
+  margin-left: 24px;
+  padding-bottom: 8px;
+  transition: background-color 0.3s ease;
+}
+.btn:focus{
+  box-shadow: none !important;
+}
+.btn-custom:focus {
+  box-shadow: none !important;
+}
+.btn-custom:hover{
+  background-color: #FFFFFF; 
+  color: #00AB55; 
+}
+#bannerBtns{
+  background-color: #F6F6F6; 
+  color: #000000; 
+  font-weight: 500;
+  border: 1px solid transparent; 
+  border-radius: 24px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin: 24px 18px auto 0;
+}
+#bannerBtns:hover{
+  background-color: #FFFFFF; 
+  color: #000000; 
+}
+#contactUs {
+  background-color: #00AB55; 
+  color: #FFFFFF;
+  font-weight: 500; 
+  border: 1px solid transparent; 
+  border-radius: 24px;
+  padding-bottom: 8px;
+  margin-left: 0;
+  margin-top: 2rem;
+}
+#contactUs:hover {
+  background-color: #00C863 !important; 
+}
+#send-request {
+  background-color: #9A9A9A; 
+  color: #FFFFFF;
+  font-weight: 500; 
+  border: 1px solid transparent; 
+  border-radius: 24px;
+  padding-bottom: 8px;
+  margin-left: 0;
+  margin-top: 2rem;
+}
+.vl {
+  border-left: 1px solid #FFFFFF; 
+  height: 1rem; 
+  margin: 0 0.5rem; 
+}
+.header-wrapper {
+  position: fixed;
+  width: -webkit-fill-available;
+  z-index: 1000;
+}
+.phone {
+  color: #F6F6F6;
+}
+.phone:hover {
+  color: #FFFFFF;
+}
+.tooltip-inner {
+  background-color: #FFFFFF; 
+  color: #00AB55; 
+  border-radius: 8px 0 8px 8px; 
+  padding: 0.3rem; 
+  font-size: 11px;
+}
+.banner-wrapper {
+  width: 100%;
+  height: 781px; 
+  overflow: hidden;
+  position: relative;
+}
+.banner-wrapper-div {
+  border: none !important;
+}
+.video-banner {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border: 1px solid transparent;
+  border-radius: 32px;
+}
+.mobile-background {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+}
+.cardd {
+  margin-top: 250px;
+}
+.main-banner-card {
+  background-color: rgba(255, 255, 255, 0.2); 
+  backdrop-filter: blur(50px); 
+  color: #ffffff;
+  margin: 8rem 3rem 3rem 3rem;
+  border: 1px solid transparent;
+  border-radius: 32px;
+}
+
+.heading {
+  font-weight: bold; 
+  font-size: 48px; 
+  padding: 0.3rem;
+  line-height: 1; 
+  text-transform: uppercase;
+}
+.coins{
+  background-color: white;
+  opacity: .8;
+  color:#000000;
+  border: 1px solid transparent;
+  border-radius: 32px;
+}
+.monthly-benefit-card {
+  background-color: #F6F6F6;
+  border: 1px solid transparent;
+  border-radius: 18px;
+}
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.5s forwards;
+}
+.monthly-benefits {
+  background-color: #FFFFFF;
+}
+.montly-benefits-cards{
+  background-color: #F6F6F6;
+  border: 1px solid #F6F6F6;
+}
+.about-btn{
+  background-color: #00AB55;
+  height: 100%;
+}
+.img-coins {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.img-video {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* Высота 16:9 */
+  border: 1px solid white;
+  border-radius: 48px;
+}
+
+.img-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.form-submit{
+  background-color: #F6F6F6;
+  border: 1px solid #F6F6F6;
+  border-radius: 24px;
+  margin-bottom: 1rem;
+  padding: 24px;
+  color: #9A9A9A; 
+
+}
+.form-control:focus {
+  border-color: #F6F6F6;
+  box-shadow: none;
+}
+.text-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.7s ease-in-out;
+}
+
+.text-container.open {
+  max-height: 1500px; 
+  animation: fadeIn 0.7s ease-in-out; 
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+.ourbenefits-download-btns{
+  color: #00AB55;
+  line-height: 1;
+  text-decoration: underline;
+  font-size: 22px;
+}
+.map-btn{
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+  pointer-events: none;
+  cursor: default;
+  opacity: 1 !important; 
+}
+.main-banner-btn-contactUs{
+  margin-top: 6rem;
+}
