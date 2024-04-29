@@ -8,7 +8,7 @@ const Map = () => {
   const isXsScreen = window.innerWidth < 768;
 
   return (
-    <Card className="coins mx-3 w-100">
+    <Card className="coins mx-3 w-100 mt-2">
       <Card.Body>
         <Row className="justify-content-center text-center align-items-center mb-3">
           <Col>
@@ -34,8 +34,8 @@ const Map = () => {
             </Col>
           </Row>
         ) : (
-          <Row className="justify-content-center mb-3">
-            <Col>
+          <Row className="mb-3">
+            <Col className="d-flex justify-content-center mb-3">
               <Image src="/img/Map.png" fluid />
             </Col>
           </Row>

@@ -14,9 +14,9 @@ const MainPage = () => (
   <PageLayout>
     <MainBanner />
     <About />
-    <MontlyBenefits />
     <OurBenefits />
     <Coins />
+    <MontlyBenefits />
     <Partners />
     <FAQ />
     <RequestForm />

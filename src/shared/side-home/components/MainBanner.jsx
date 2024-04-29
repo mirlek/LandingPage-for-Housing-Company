@@ -7,7 +7,7 @@ const MainBanner = () => {
   const isMobile = window.innerWidth < 1264;
 
   return (
-    <Card className="coins mx-3 w-100" style={{ position: 'relative', overflow: 'hidden' }}>
+    <Card className="coins mx-3 w-100 mb-2" style={{ position: 'relative', overflow: 'hidden' }}>
       <Card.Body className="p-0 m-0">
         <Header />
         <MainBannerCard />

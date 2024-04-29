@@ -38,8 +38,8 @@ const RequestForm = () => {
   };
 
   return (
-    <Card className="coins mx-2 mb-4 w-100" style={{ backgroundColor: '#F6F6F6' }} id="requestForm">
-      <Card.Body>
+    <Card className="coins mx-2 mt-4 mb-4 w-100" style={{ backgroundColor: '#F6F6F6' }} id="requestForm">
+      <Card.Body className='p-0 m-0'>
         <Row className="justify-content-center">
           <Col lg={4} className="d-none d-lg-block">
             <div className="d-flex justify-content-center">
