@@ -90,7 +90,8 @@
     "picplus": "/img/Dropdown_Button.png",
     "picminus": "/img/Dropdown_minus_Button.png",
     "picvideo": "/img/Video.png",
-    "picdocument": "/img/Document_ourBenefits.png"
+    "picdocument": "/img/Document_ourBenefits.png",
+    "youtubeLinkFAQ": "https://www.youtube.com/watch?v=H9J_7uwga7M"
   },
   "about": {
     "heading": "О продукте",
@@ -112,7 +113,7 @@
   "request": {
     "heading": "Оставьте заявку",
     "text": "если вы являетесь председателем, и мы с вами свяжемся в ближайшее время",
-    "info": "Отправляя заявку, вы соглашаетесь на обработку персональных данных"
+    "info": "<p>Отправляя заявку, вы соглашаетесь на&nbsp;<u>обработку персональных данных</u></p>"
   },
   "contacts": {
     "heading": "Контакты",
@@ -124,8 +125,8 @@
     "phone_label": "/img/call.png",
     "email_label": "/img/primary.png",
     "address_label": "/img/maps_location.png",
-    "telegram": "/img/telegram.png",
-    "whatsapp": "/img/whatsapp.png"
+    "telegram": "/img/Telegram.png",
+    "whatsapp": "/img/Whatsapp.png"
   },
   "map": {
     "heading": "Где мы работаем",

@@ -6,7 +6,7 @@ import { faPhoneVolume, faCircleInfo } from '@fortawesome/free-solid-svg-icons';
 import { PATH_AUTH } from '@app/routes/paths';
 import { tokens, TranslatedToken } from '@shared/utils/i18n';
 import { NavLink } from 'react-router-dom';
-import LanguageSelector from './HeaderAndFooterComponents/ChangeLanguage';
+import LanguageSelector from './ChangeLanguage';
 
 const Header = () => {
   const { t } = useTranslation();

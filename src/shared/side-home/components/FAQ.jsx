@@ -48,16 +48,21 @@ const FAQ = () => {
                 </Card.Title>
               </Col>
               <Col xs={9} md={9} lg={10}>
-                <Card.Text style={{ fontWeight: 'bold', fontSize: '32px' }} className="text-content p-0 m-0">
+                <Card.Text style={{ fontWeight: 'bold', fontSize: '32px' }} className="text-content p-0 m-0 mt-3">
                   {faqData[key].title}
                 </Card.Text>
-                <div
-                  className={`text-container ${expandedIndex === index ? 'open' : ''} mt-3`}
-                  dangerouslySetInnerHTML={{ __html: faqData[key].text }}
-                />
+                <div className={`text-container ${expandedIndex === index ? 'open' : ''} mt-3`}>
+                  <div dangerouslySetInnerHTML={{ __html: faqData[key].text }} />
+                  {index === 0 && (
+                    <Button variant="link" href={faqData.youtubeLinkFAQ} target="_blank" className="ourbenefits-download-btns">
+                      <img src={t('faq.picvideo')} className="d-none d-md-inline me-2" />
+                      {t('ourbenefits.video')}
+                    </Button>
+                  )}
+                </div>
               </Col>
               <Col xs={1} md={1} lg={1} className="d-flex justify-content-end align-items-start">
-                <Button onClick={() => toggleExpand(index)} type="button" variant={null} className="btn btn-link">
+                <Button onClick={() => toggleExpand(index)} type="button" variant={null} className="btn btn-link mt-1">
                   <Image
                     src={expandedIndex === index ? '/img/Dropdown_minus_Button.png' : '/img/Dropdown_Button.png'}
                     alt="Expand/Collapse"

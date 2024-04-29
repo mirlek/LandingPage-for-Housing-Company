@@ -9,7 +9,7 @@ const MontlyBenefits = () => {
 
   return (
     <Card className="coins mx-3 p-3 w-100">
-      <Card.Body>
+      <Card.Body className='pb-2'>
         <Col className="d-flex justify-content-center text-center">
           <p style={{ color: '#00AB55' }} className="heading">
             {t('montlybenefits.heading')}
@@ -18,14 +18,14 @@ const MontlyBenefits = () => {
         <Row>
           <Col md={6} className="p-1">
             {keys.map((key) => (
-              <Card className="monthly-benefit-card mt-2 mb-2" key={key}>
+              <Card className="monthly-benefit-card mt-2" key={key}>
                 <Card.Body>
                   <div className="d-flex align-items-center justify-content-start pl-3 mb-3">
                     <Card.Img
                       variant="top"
                       src={t(`montlybenefits.pic${key}`)}
                       style={{ height: '24px', width: '24px' }}
-                      className="mr-3 mt-1"
+                      className="me-2"
                     />
                     <Card.Title style={{ fontWeight: 'bold', fontSize: '24px' }} className="card-text">
                       {t(`montlybenefits.title${key}`)}
@@ -45,7 +45,7 @@ const MontlyBenefits = () => {
                       variant="top"
                       src={t(`montlybenefits.pic${key + 4}`)}
                       style={{ height: '24px', width: '24px' }}
-                      className="mr-3 mt-1"
+                      className="me-2"
                     />
                     <Card.Title style={{ fontWeight: 'bold', fontSize: '24px' }} className="card-text">
                       {t(`montlybenefits.title${key + 4}`)}

@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Card, Row, Col, Image, Button } from 'react-bootstrap';
+import { Card, Row, Col, Image, Button, Container } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
 const About = () => {
@@ -20,9 +20,9 @@ const About = () => {
 
   return (
     <Card className="coins mx-3 w-100 mb-4 mt-4">
-      <Card.Body>
+      <Card.Body className='p-0'>
         <Row>
-          <Col className="d-flex justify-content-center mb-2">
+          <Col className="d-flex justify-content-center mb-4 mt-4">
             <p style={{ color: '#00AB55' }} className="heading">
               {t('about.heading')}
             </p>
@@ -55,25 +55,23 @@ const About = () => {
               <Card className="monthly-benefit-card mt-4" key={key}>
                 <Card.Body>
                   <Row className="d-flex justify-content-between p-0 m-0">
-                    <Col sm={2} md={2} lg={1} className="d-flex align-items-center">
+                    <Col className="d-flex align-items-center m-0">
                       <Card.Text style={{ fontSize: '24px' }} className="card-text">
                         {numbers[index]}
                       </Card.Text>
                     </Col>
-                    <Col lg={2} className="d-lg-block d-md-none d-sm-none">
-                      <div className="d-flex justify-content-center">
-                        <Image src={t(`about.pic${key}`)} className="about-image" />
-                      </div>
-                    </Col>
-                    <Col sm={8} md={8} lg={4} className="d-flex align-items-center justify-content-start">
-                      <div>
+                    <Col className="d-flex align-items-center justify-content-start m-0 p-0">
+                      <Col className="d-lg-block d-none m-0 p-0">
+                          <Image src={t(`about.pic${key}`)} className="about-image" />
+                      </Col>
+                      <Col>
                         <Card.Title style={{ fontWeight: 'bold', fontSize: '24px' }} className="card-text">
-                          {t(`about.short${key}`)}
-                        </Card.Title>
+                            {t(`about.short${key}`)}
+                          </Card.Title>
                         <Card.Text className="text-content">{t(`about.timestamp${key}`)}</Card.Text>
-                      </div>
+                      </Col>
                     </Col>
-                    <Col sm={2} md={2} lg={2} className="d-flex justify-content-end">
+                    <Col className="d-flex justify-content-end">
                       <Button variant="success" className="about-btn" onClick={() => handleTimeJump(jumpTimes[index])}>
                         <Image src="/img/arrow-right.png" alt="btn-about" style={{ padding: 0, margin: 0 }} />
                       </Button>
@@ -83,35 +81,29 @@ const About = () => {
               </Card>
             ))}
           </Col>
-          <Col md={6} className="">
+          <Col md={6}>
             {keys.map((key, index) => (
-              <Card className="monthly-benefit-card mt-4 mb-4" key={key} style={{ minHeight: '115px' }}>
+              <Card className="monthly-benefit-card mt-4" key={key}>
                 <Card.Body>
-                  <Row className="d-flex justify-content-between p-0 m-0">
-                    <Col sm={2} md={2} lg={1} className="d-flex align-items-center">
+                  <Row className="d-flex p-0 m-0">
+                    <Col className="d-flex align-items-center m-0">
                       <Card.Text style={{ fontSize: '24px' }} className="card-text">
                         {numbers[index + 2]}
                       </Card.Text>
                     </Col>
-                    <Col lg={2} className="d-lg-block d-md-none d-sm-none">
-                      <div className="d-flex justify-content-center">
-                        <Image src={t(`about.pic${key + 2}`)} className="about-image" />
-                      </div>
-                    </Col>
-                    <Col sm={8} md={8} lg={4} className="d-flex align-items-center justify-content-start">
-                      <div>
+                    <Col className="d-flex align-items-center justify-content-start m-0 p-0">
+                      <Col className="d-lg-block d-none m-0 p-0">
+                          <Image src={t(`about.pic${key + 2}`)} className="about-image" />
+                      </Col>
+                      <Col>
                         <Card.Title style={{ fontWeight: 'bold', fontSize: '24px' }} className="card-text">
-                          {t(`about.short${key + 2}`)}
-                        </Card.Title>
+                            {t(`about.short${key + 2}`)}
+                          </Card.Title>
                         <Card.Text className="text-content">{t(`about.timestamp${key + 2}`)}</Card.Text>
-                      </div>
+                      </Col>
                     </Col>
-                    <Col sm={2} md={2} lg={2} className="d-flex justify-content-end">
-                      <Button
-                        variant="success"
-                        className="about-btn"
-                        onClick={() => handleTimeJump(jumpTimes[index + 2])}
-                      >
+                    <Col className="d-flex justify-content-end">
+                      <Button variant="success" className="about-btn" onClick={() => handleTimeJump(jumpTimes[index + 2])}>
                         <Image src="/img/arrow-right.png" alt="btn-about" style={{ padding: 0, margin: 0 }} />
                       </Button>
                     </Col>

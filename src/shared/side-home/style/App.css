@@ -1,11 +1,13 @@
 body {
   background-color: #F6F6F6;
+  font-family: 'Public Sans', sans-serif;
 }
 .App {
   font-size: 22px;
   width: 100%;
   height: max-content;
   background-color: #F6F6F6;
+  font-family: 'Public Sans', sans-serif;
 }
 .container {
   max-width: none;
@@ -43,6 +45,9 @@ body {
   .main-banner-btn-contactUs{
     margin-top: 1rem !important;
   }
+  .text-container {
+    font-size: 13px;
+  }
 }
 @media (max-width: 767.98px) {
   .ourbenefits-download-btns {
@@ -70,6 +75,9 @@ body {
   }
   .main-banner-btn-contactUs{
     margin-top: 1rem;
+  }
+  .text-container {
+    font-size: 13px;
   }
 }
 
@@ -230,7 +238,6 @@ button {
   top: 0;
   left: 0;
   z-index: -1;
-
 }
 .cardd {
   margin-top: 250px;
@@ -287,6 +294,9 @@ button {
 .about-btn{
   background-color: #00AB55;
   height: 100%;
+}
+.about-image{
+  max-width: fit-content;
 }
 .img-coins {
   position: relative;
@@ -358,5 +368,5 @@ button {
   opacity: 1 !important; 
 }
 .main-banner-btn-contactUs{
-  margin-top: 6rem;
+  margin-top: 3em;
 }

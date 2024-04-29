@@ -85,7 +85,7 @@ const OurBenefits = () => {
                       <img
                         src={index === 2 ? t('faq.picvideo') : t('faq.picdocument')}
                         alt={index === 2 ? 'Video Icon' : 'Document Icon'}
-                        className="d-none d-md-inline"
+                        className="d-none d-md-inline me-1"
                       />
                       {index === 2 ? t(`ourbenefits.video`) : t(`ourbenefits.option${key}`)}
                     </Button>

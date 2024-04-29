@@ -112,7 +112,7 @@
   "request": {
     "heading": "Өтініш қалдырыңыз",
     "text": "егер сіз төраға болсаңыз және біз сізге жақын арада хабарласамыз",
-    "info": "Өтінім беру арқылы сіз жеке деректерді өңдеуге келісесіз"
+    "info": "<p>Өтінім беру арқылы сіз &nbsp;жеке деректерді өңдеуге келісесіз</p>"
   },
   "contacts": {
     "heading": "Контактілер",
@@ -124,11 +124,11 @@
     "phone_label": "/img/call.png",
     "email_label": "/img/primary.png",
     "address_label": "/img/maps_location.png",
-    "telegram": "/img/telegram.png",
-    "whatsapp": "/img/whatsapp.png"
+    "telegram": "/img/Telegram.png",
+    "whatsapp": "/img/Whatsapp.png"
   },
   "map": {
-    "heading": "Қай жерде жұмыс істейміз",
+    "heading": "Біз қайда жұмыс істейміз",
     "city1": "Астана",
     "city2": "Батыс Қазақстан облысы",
     "city3": "Ақтөбе облысы",

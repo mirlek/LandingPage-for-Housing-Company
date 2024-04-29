@@ -86,8 +86,8 @@ const RequestForm = () => {
                 <Card.Text
                   className="d-flex justify-content-center text-center mb-4 mt-2"
                   style={{ color: '#9A9A9A', fontSize: '17px' }}
+                  dangerouslySetInnerHTML={{ __html: t('request.info') }}
                 >
-                  {t('request.info')}
                 </Card.Text>
               </Form>
             </div>

@@ -8,7 +8,7 @@ import FAQ from '../FAQ';
 import Map from '../Map';
 import About from '../About';
 import RequestForm from '../RequestForm';
-import Contacts from '../Contacts';
+import Footer from './Footer';
 
 const MainPage = () => (
   <PageLayout>
@@ -21,7 +21,7 @@ const MainPage = () => (
     <FAQ />
     <RequestForm />
     <Map />
-    <Contacts />
+    <Footer />
   </PageLayout>
 );
 export default MainPage;
