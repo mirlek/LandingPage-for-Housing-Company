@@ -25,7 +25,7 @@ const MainBannerCard = () => {
             <Col>
               <Col className="mb-3 p-0">
                 <p className="heading" style={{ textTransform: 'none' }}>
-                  {t('mainBanner.heading')}
+                  {t('home:mainBanner.heading')}
                 </p>
               </Col>
   
@@ -42,13 +42,13 @@ const MainBannerCard = () => {
                     }}
                     onClick={() => handleButtonClick(index + 1)}
                   >
-                    {t(`mainBanner.${key}`)}
+                    {t(`home:mainBanner.${key}`)}
                   </button>
                 ))}
               </div>
               <Col className="main-banner-btn-contactUs d-none d-lg-block">
                 <Button variant="custom" id="contactUs" href="#requestForm" className="w-lg-50 w-md-100 w-xs-100 m-0">
-                  {t('btn.contactUs')}
+                  {t('home:btn.contactUs')}
                 </Button>
               </Col>
             </Col>
@@ -61,17 +61,17 @@ const MainBannerCard = () => {
                       activeButton === index + 1 ? 'custom-text' : ''
                     }`}
                     dangerouslySetInnerHTML={{
-                      __html: activeButton === index + 1 ? t(`mainBanner.${key}text${index + 1}`) : ''
+                      __html: activeButton === index + 1 ? t(`home:mainBanner.${key}text${index + 1}`) : ''
                     }}
                   />
                 ))}
               {!activeButton && (
-                <Card.Text dangerouslySetInnerHTML={{ __html: t('mainBanner.btntext') }} className="d-inline" />
+                <Card.Text dangerouslySetInnerHTML={{ __html: t('home:mainBanner.btntext') }} className="d-inline" />
               )}
             </Col>
             <Col className="main-banner-btn-contactUs d-lg-none"> 
               <Button variant="custom" id="contactUs" href="#requestForm" className="w-lg-50 w-md-100 w-xs-100 m-0">
-                {t('btn.contactUs')}
+                {t('home:btn.contactUs')}
               </Button>
           </Col>
           </Row>

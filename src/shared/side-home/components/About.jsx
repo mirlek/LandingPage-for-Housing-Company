@@ -24,7 +24,7 @@ const About = () => {
         <Row>
           <Col className="d-flex justify-content-center mb-4 mt-4">
             <p style={{ color: '#00AB55' }} className="heading">
-              {t('about.heading')}
+              {t('home:about.heading')}
             </p>
           </Col>
         </Row>
@@ -43,7 +43,7 @@ const About = () => {
           <Col sm={12} md={12} lg={4} className="mt-4 d-flex align-items-center">
             <div>
               <Card.Text style={{ fontWeight: 'bold', fontSize: '48px', lineHeight: '1' }} className="mb-4">
-                {t(`about.title`)}
+                {t(`home:about.title`)}
               </Card.Text>
               <Card.Text dangerouslySetInnerHTML={aboutTextHtml} style={{ lineHeight: '1.2', marginBottom: '10px' }} />
             </div>
@@ -62,13 +62,13 @@ const About = () => {
                     </Col>
                     <Col className="d-flex align-items-center justify-content-start m-0 p-0">
                       <Col className="d-lg-block d-none m-0 p-0">
-                          <Image src={t(`about.pic${key}`)} className="about-image" />
+                          <Image src={t(`home:about.pic${key}`)} className="about-image" />
                       </Col>
                       <Col>
                         <Card.Title style={{ fontWeight: 'bold', fontSize: '24px' }} className="card-text">
-                            {t(`about.short${key}`)}
+                            {t(`home:about.short${key}`)}
                           </Card.Title>
-                        <Card.Text className="text-content">{t(`about.timestamp${key}`)}</Card.Text>
+                        <Card.Text className="text-content">{t(`home:about.timestamp${key}`)}</Card.Text>
                       </Col>
                     </Col>
                     <Col className="d-flex justify-content-end">
@@ -93,13 +93,13 @@ const About = () => {
                     </Col>
                     <Col className="d-flex align-items-center justify-content-start m-0 p-0">
                       <Col className="d-lg-block d-none m-0 p-0">
-                          <Image src={t(`about.pic${key + 2}`)} className="about-image" />
+                          <Image src={t(`home:about.pic${key + 2}`)} className="about-image" />
                       </Col>
                       <Col>
                         <Card.Title style={{ fontWeight: 'bold', fontSize: '24px' }} className="card-text">
-                            {t(`about.short${key + 2}`)}
+                            {t(`home:about.short${key + 2}`)}
                           </Card.Title>
-                        <Card.Text className="text-content">{t(`about.timestamp${key + 2}`)}</Card.Text>
+                        <Card.Text className="text-content">{t(`home:about.timestamp${key + 2}`)}</Card.Text>
                       </Col>
                     </Col>
                     <Col className="d-flex justify-content-end">

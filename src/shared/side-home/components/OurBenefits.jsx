@@ -21,7 +21,7 @@ const OurBenefits = () => {
         <Card.Body>
           <Col className="d-flex justify-content-center text-center">
             <p style={{ color: '#00AB55' }} className="heading">
-              {t('ourbenefits.heading')}
+              {t('home:ourbenefits.heading')}
             </p>
           </Col>
         </Card.Body>
@@ -31,16 +31,16 @@ const OurBenefits = () => {
           <Card.Body>
             <Row>
               <Col xs={3} md={2} lg={2}>
-                <Card.Img variant="top" src={t(`ourbenefits.pic${key}`)} />
+                <Card.Img variant="top" src={t(`home:ourbenefits.pic${key}`)} />
               </Col>
               <Col xs={9} md={8} lg={6} className="d-flex align-items-center">
                 <div>
                   <Card.Title>
                     <p className="heading" style={{ fontSize: '32px' }}>
-                      {t(`ourbenefits.title${key}`)}
+                      {t(`home:ourbenefits.title${key}`)}
                     </p>
                   </Card.Title>
-                  <Card.Text style={{ lineHeight: '1' }}>{t(`ourbenefits.text${key}`)}</Card.Text>
+                  <Card.Text style={{ lineHeight: '1' }}>{t(`home:ourbenefits.text${key}`)}</Card.Text>
                 </div>
               </Col>
               <Col
@@ -56,21 +56,21 @@ const OurBenefits = () => {
                     <>
                       <Button
                         variant="link"
-                        href={t(`ourbenefits.link2`)}
+                        href={t(`home:ourbenefits.link2`)}
                         download
                         className="ourbenefits-download-btns"
                       >
-                        <img src={t('faq.picdocument')} alt="Document Icon" className="d-none d-md-inline" />
-                        {t('ourbenefits.option2')}
+                        <img src={t('home:faq.picdocument')} alt="Document Icon" className="d-none d-md-inline" />
+                        {t('home:ourbenefits.option2')}
                       </Button>
                       <Button
                         variant="link"
-                        href={t(`ourbenefits.link3`)}
+                        href={t(`home:ourbenefits.link3`)}
                         download
                         className="ourbenefits-download-btns"
                       >
-                        <img src={t('faq.picdocument')} alt="Document Icon" className="d-none d-md-inline" />
-                        {t('ourbenefits.option3')}
+                        <img src={t('home:faq.picdocument')} alt="Document Icon" className="d-none d-md-inline" />
+                        {t('home:ourbenefits.option3')}
                       </Button>
                     </>
                   ) : (

@@ -33,7 +33,7 @@ const FAQ = () => {
         <Card.Body>
           <Col className="d-flex justify-content-center text-center">
             <p style={{ color: '#00AB55' }} className="heading">
-              {t('faq.heading')}
+              {t('home:faq.heading')}
             </p>
           </Col>
         </Card.Body>
@@ -44,7 +44,7 @@ const FAQ = () => {
             <Row className="d-flex align-items-start">
               <Col xs={1} md={1} lg={1} className="d-flex justify-content-center mt-3">
                 <Card.Title style={{ fontWeight: 'bold', fontSize: '24px', color: '#9A9A9A' }} className="text-content">
-                  {t(`faq.num${key}`)}
+                  {t(`home:faq.num${key}`)}
                 </Card.Title>
               </Col>
               <Col xs={9} md={9} lg={10}>
@@ -55,8 +55,8 @@ const FAQ = () => {
                   <div dangerouslySetInnerHTML={{ __html: faqData[key].text }} />
                   {index === 0 && (
                     <Button variant="link" href={faqData.youtubeLinkFAQ} target="_blank" className="ourbenefits-download-btns">
-                      <img src={t('faq.picvideo')} className="d-none d-md-inline me-2" />
-                      {t('ourbenefits.video')}
+                      <img src={t('home:faq.picvideo')} className="d-none d-md-inline me-2" />
+                      {t('home:ourbenefits.video')}
                     </Button>
                   )}
                 </div>

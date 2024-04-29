@@ -48,7 +48,7 @@ const Header = () => {
             </div>
             <div>
               <Button variant="custom" id="loginBtn">
-                {t('btn.login')}
+                {t('home:btn.login')}
               </Button>
             </div>
           </div>

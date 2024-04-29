@@ -15,11 +15,11 @@ const Coins = () => {
             </div>
           </Col>
           <Col sm={12} md={6} lg={6} className="mt-4 text-center text-lg-start">
-            <p className="heading p-0 mb-4">{t('coins.heading')}</p>
-            <p className="text-content">{t('coins.text')}</p>
+            <p className="heading p-0 mb-4">{t('home:coins.heading')}</p>
+            <p className="text-content">{t('home:coins.text')}</p>
             <div className='mt-4'>
               <Button variant="custom" id="contactUs" href="#requestForm">
-                {t('btn.contactUs')}
+                {t('home:btn.contactUs')}
               </Button>
             </div>
           </Col>
