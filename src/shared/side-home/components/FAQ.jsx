@@ -41,13 +41,8 @@ const FAQ = () => {
       {keys.map((key, index) => (
         <Card className="coins mx-3 mb-3 w-100" key={key}>
           <Card.Body>
-            <Row className="d-flex align-items-start">
-              <Col xs={1} md={1} lg={1} className="d-flex justify-content-center mt-3">
-                <Card.Title style={{ fontWeight: 'bold', fontSize: '24px', color: '#9A9A9A' }} className="text-content">
-                  {t(`faq.num${key}`)}
-                </Card.Title>
-              </Col>
-              <Col xs={9} md={9} lg={10}>
+            <Row className="d-flex align-items-start p-2">
+              <Col xs={10} md={10} lg={10}>
                 <Card.Text style={{ fontWeight: 'bold', fontSize: '32px' }} className="text-content p-0 m-0 mt-3">
                   {faqData[key].title}
                 </Card.Text>
@@ -61,8 +56,8 @@ const FAQ = () => {
                   )}
                 </div>
               </Col>
-              <Col xs={1} md={1} lg={1} className="d-flex justify-content-end align-items-start">
-                <Button onClick={() => toggleExpand(index)} type="button" variant={null} className="btn btn-link mt-1">
+              <Col xs={2} md={2} lg={2} className="d-flex justify-content-end align-items-start">
+                <Button onClick={() => toggleExpand(index)} type="button" variant={null} className="btn btn-link mt-3">
                   <Image
                     src={expandedIndex === index ? '/img/Dropdown_minus_Button.png' : '/img/Dropdown_Button.png'}
                     alt="Expand/Collapse"

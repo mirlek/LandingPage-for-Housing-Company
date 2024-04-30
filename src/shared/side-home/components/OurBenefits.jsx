@@ -30,8 +30,8 @@ const OurBenefits = () => {
         <Card key={index} className="coins mx-3 mb-3 p-1 w-100">
           <Card.Body>
             <Row>
-              <Col xs={3} md={2} lg={2}>
-                <Card.Img variant="top" src={t(`ourbenefits.pic${key}`)} />
+              <Col xs={3} md={2} lg={2} className='d-flex justify-content-center align-items-center'>
+                <Card.Img variant="top" src={t(`ourbenefits.pic${key}`)} className='our-benefits-img'/>
               </Col>
               <Col xs={9} md={8} lg={6} className="d-flex align-items-center">
                 <div>
@@ -45,9 +45,9 @@ const OurBenefits = () => {
               </Col>
               <Col
                 xs={12}
-                md={2}
+                md={12}
                 lg={4}
-                className={`d-flex align-items-center ${
+                className={`d-flex align-items-center our-benefits-btn-block ${
                   window.innerWidth < 767 ? 'justify-content-center' : 'justify-content-end'
                 }`}
               >
@@ -60,7 +60,7 @@ const OurBenefits = () => {
                         download
                         className="ourbenefits-download-btns"
                       >
-                        <img src={t('faq.picdocument')} alt="Document Icon" className="d-none d-md-inline" />
+                        <img src={t('faq.picdocument')} alt="Document Icon" className="d-none d-md-inline me-1" />
                         {t('ourbenefits.option2')}
                       </Button>
                       <Button
@@ -69,7 +69,7 @@ const OurBenefits = () => {
                         download
                         className="ourbenefits-download-btns"
                       >
-                        <img src={t('faq.picdocument')} alt="Document Icon" className="d-none d-md-inline" />
+                        <img src={t('faq.picdocument')} alt="Document Icon" className="d-none d-md-inline me-1" />
                         {t('ourbenefits.option3')}
                       </Button>
                     </>

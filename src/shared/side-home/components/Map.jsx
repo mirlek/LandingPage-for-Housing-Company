@@ -23,7 +23,7 @@ const Map = () => {
               {['city1', 'city2', 'city3', 'city4', 'city5', 'city6', 'city7', 'city8'].map((city, index) => (
                 <Button
                   key={index}
-                  variant={index === 0 ? 'outline-success' : 'outline-secondary'}
+                  variant={'outline-secondary'}
                   className="w-100 map-btn"
                   style={{ fontWeight: 'bold' }}
                   disabled
