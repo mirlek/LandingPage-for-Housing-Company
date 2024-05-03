@@ -6,6 +6,7 @@ const FAQ = () => {
   const { t } = useTranslation();
   const [expandedIndex, setExpandedIndex] = useState(null);
   const [isRotated, setIsRotated] = useState(false);
+  const [isSecondRotated, setIsSecondRotated] = useState(false);
   const keys = Array.from({ length: 3 }, (_, index) => index + 1);
   const faqData = {
     1: {
@@ -57,12 +58,11 @@ const FAQ = () => {
                 </div>
               </Col>
               <Col xs={2} md={2} lg={2} className="d-flex justify-content-end align-items-start">
-                <Button onClick={() => toggleExpand(index)} type="button" variant={null} className="btn btn-link mt-3">
-                  <Image
-                    src={expandedIndex === index ? '/img/Dropdown_minus_Button.png' : '/img/Dropdown_Button.png'}
-                    alt="Expand/Collapse"
-                    className={`img-fluid img-xs img-md ${isRotated ? 'rotate180' : ''}`}
-                  />
+                <Button onClick={() => toggleExpand(index)} type="button" variant={null} className={"btn btn-link mt-2"}>
+                  <div className="container">
+                    <Image src="/img/Dropdown_minus_Button.png" alt="Minus" className='icon minus'/>
+                    <Image src="/img/Dropdown_plus_Button.png" alt="Plus" className={`icon ${expandedIndex === index ? 'hidden' : ''}`} />
+                  </div>
                 </Button>
               </Col>
             </Row>

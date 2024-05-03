@@ -91,6 +91,10 @@ body {
     width: 80px !important;
     height: 80px !important;
   }
+  .icon {
+    width: 24px !important;
+    height: 24px !important;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -351,16 +355,36 @@ button {
   width: 100%;
   height: 100%;
 }
+.request-form-icon-input-wrapper {
+  position: relative;
+}
+
+.request-form-icon-wrapper {
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.request-form-icon-input-wrapper:focus-within .request-form-icon {
+  transition: filter 0.4s ease;
+  filter: brightness(0);
+}
+
 .form-submit{
   background-color: #F6F6F6;
   border: 1px solid #F6F6F6;
-  border-radius: 24px;
+  border-radius: 32px;
   margin-bottom: 1rem;
   padding: 24px;
-  color: #9A9A9A; 
-
+  padding-left: 58px;
+}
+.form-control {
+  color: black;
+  font-weight: bold;
 }
 .form-control:focus {
+  background-color: #F6F6F6;
   border-color: #F6F6F6;
   box-shadow: none;
 }
@@ -383,8 +407,6 @@ button {
     opacity: 1;
   }
 }
-
-
 .ourbenefits-download-btns{
   color: #00AB55;
   line-height: 1;
@@ -405,3 +427,20 @@ button {
   width: 124px;
   height: 124px;
 }
+
+.icon {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.4s ease, opacity 0.4s ease; 
+  position: absolute; 
+}
+
+.hidden {
+  opacity: 0; 
+  pointer-events: none;
+}
+
+.hidden.icon {
+  transform: rotate(-90deg); 
+}
+

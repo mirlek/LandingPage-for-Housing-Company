@@ -13,8 +13,13 @@ const MainBannerCard = () => {
   }, []);
 
   const handleButtonClick = (index) => {
-    setActiveButton(index);
-    setAnimationStarted(true);
+    if (activeButton === index) {
+      setActiveButton(null); 
+      setAnimationStarted(false); 
+    } else {
+      setActiveButton(index);
+      setAnimationStarted(true);
+    }
   };
 
   return (
@@ -66,7 +71,8 @@ const MainBannerCard = () => {
                   />
                 ))}
               {!activeButton && (
-                <Card.Text dangerouslySetInnerHTML={{ __html: t('mainBanner.btntext') }} className="d-inline" />
+                <Card.Text dangerouslySetInnerHTML={{ __html: t('mainBanner.btntext') }}  
+                  className={`d-inline ${!activeButton && !animationStarted ? 'slide-in' : ''}`}/>
               )}
             </Col>
             <Col className="main-banner-btn-contactUs d-lg-none"> 

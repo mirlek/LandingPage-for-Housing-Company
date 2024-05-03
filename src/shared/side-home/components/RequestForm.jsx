@@ -55,7 +55,11 @@ const RequestForm = () => {
               </Col>
               <Card.Text className="d-flex justify-content-center text-center mb-4">{t('request.text')}</Card.Text>
               <Form className="mt-4">
-                <Form.Group controlId="formName">
+              <Form.Group controlId="formName">
+                <div className="request-form-icon-input-wrapper">
+                  <div className="request-form-icon-wrapper">
+                    <Image src="\img\primary_2.png" alt="User Icon" className="request-form-icon" />
+                  </div>
                   <Form.Control
                     type="text"
                     placeholder="Имя"
@@ -63,8 +67,13 @@ const RequestForm = () => {
                     onChange={handleNameChange}
                     className="form-submit"
                   />
-                </Form.Group>
-                <Form.Group controlId="formPhone">
+                </div>
+              </Form.Group>
+              <Form.Group controlId="formPhone">
+                <div className="request-form-icon-input-wrapper">
+                  <div className="request-form-icon-wrapper">
+                    <Image src="\img\call.png" alt="User Icon" className="request-form-icon" />
+                  </div>
                   <Form.Control
                     type="tel"
                     placeholder="Номер телефона"
@@ -72,7 +81,8 @@ const RequestForm = () => {
                     onChange={handlePhoneChange}
                     className="form-submit"
                   />
-                </Form.Group>
+                </div>
+              </Form.Group>
                 <Button
                   variant="custom"
                   id="send-request"

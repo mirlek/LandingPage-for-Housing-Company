@@ -25,9 +25,11 @@ const Header = () => {
               arrow={false} 
             >
               <div className="phone me-4">
+              <a href="tel:+77076825676">
                 <FontAwesomeIcon icon={faPhoneVolume} className="me-2" />
-                +7(707)682-56-76
+                  +7(707)682-56-76
                 <FontAwesomeIcon icon={faCircleInfo} className="ms-2" />
+              </a>
               </div>
             </OverlayTrigger>
             <LanguageSelector className="mr-3" />
