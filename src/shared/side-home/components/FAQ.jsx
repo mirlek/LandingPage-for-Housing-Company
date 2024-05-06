@@ -6,7 +6,6 @@ const FAQ = () => {
   const { t } = useTranslation();
   const [expandedIndex, setExpandedIndex] = useState(null);
   const [isRotated, setIsRotated] = useState(false);
-  const [isSecondRotated, setIsSecondRotated] = useState(false);
   const keys = Array.from({ length: 3 }, (_, index) => index + 1);
   const faqData = {
     1: {
@@ -44,9 +43,11 @@ const FAQ = () => {
           <Card.Body>
             <Row className="d-flex align-items-start p-2">
               <Col xs={10} md={10} lg={10}>
-                <Card.Text style={{ fontWeight: 'bold', fontSize: '32px' }} className="text-content p-0 m-0 mt-3">
-                  {faqData[key].title}
-                </Card.Text>
+                <Button onClick={() => toggleExpand(index)} type="button" variant={null} className='btn'>
+                  <Card.Text style={{ fontWeight: 'bold', fontSize: '32px', textAlign: 'start' }} className="text-content p-0 m-0 mt-3">
+                    {faqData[key].title}
+                  </Card.Text>   
+                </Button>             
                 <div className={`text-container ${expandedIndex === index ? 'open' : ''} mt-3`}>
                   <div dangerouslySetInnerHTML={{ __html: faqData[key].text }} />
                   {index === 0 && (

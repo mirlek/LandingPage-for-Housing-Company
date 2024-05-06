@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, Row, Col, Image, Form, Button } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
@@ -17,19 +17,26 @@ const RequestForm = () => {
     event.stopPropagation();
     console.log('Ваша заявка отправлена!');
   };
+  
   const handleNameChange = (event) => {
     setName(event.target.value);
-    checkFormValidity();
   };
 
+  const handlePhoneFocus = () => {
+    if (!phone.startsWith('+7') && !phone.startsWith('7')) {
+      setPhone('+7' + phone);
+    }
+  };
   const handlePhoneChange = (event) => {
-    const newPhone = event.target.value;
+    let newPhone = event.target.value;
+    if (!newPhone.startsWith('+7')) { newPhone = '+7' + newPhone.substring(2); }
     setPhone(newPhone);
-    checkFormValidity(newPhone);
   };
-
-  const checkFormValidity = (phone) => {
-    const phoneRegex = /^(?:\+7|7|8)[0-9]{10}$/;
+  
+  useEffect(() => {checkFormValidity()}, [name, phone]);
+  
+  const checkFormValidity = () => {
+    const phoneRegex = /^(?:\+7|7)[0-9]{10}$/;
     if (name && name.trim() !== '' && phone && phone.trim().match(phoneRegex)) {
       setFormValid(true);
     } else {
@@ -78,6 +85,7 @@ const RequestForm = () => {
                     type="tel"
                     placeholder="Номер телефона"
                     value={phone}
+                    onFocus={handlePhoneFocus}
                     onChange={handlePhoneChange}
                     className="form-submit"
                   />
