@@ -27,19 +27,26 @@ const MainBannerCard = () => {
       <Card.Body className="p-0">
         <Container>
           <Row xs={1} md={2}>
-            <Col>
+            <Col lg={5}>
               <Col className="mb-3 p-0">
                 <p className="heading" style={{ textTransform: 'none' }}>
                   {t('mainBanner.heading')}
                 </p>
               </Col>
-  
-              <div className="d-lg-inline d-none">
+              <Col className="main-banner-btn-contactUs d-none d-lg-block">
+                <Button variant="custom" id="contactUs" href="#requestForm" className="w-lg-50 w-md-100 w-xs-100 m-0">
+                  {t('btn.contactUs')}
+                </Button>
+              </Col>
+            </Col>
+            <Col lg={7} className="fill" style={{ height: '350px' }}>
+            <div className="d-lg-flex flex-wrap d-none align-items-center mb-4">
+              <p style={{ fontSize: '18px' }}>{t('mainBanner.btntitle')}</p>
                 {['btn1', 'btn2', 'btn3', 'btn4'].map((key, index) => (
-                  <button
+                  <Button
                     type={'button'}
                     key={index}
-                    className="btn btn-lg "
+                    className="btn btn-lg"
                     id="bannerBtns"
                     style={{
                       backgroundColor: activeButton === index + 1 ? '#161C24' : '#F6F6F6',
@@ -48,16 +55,9 @@ const MainBannerCard = () => {
                     onClick={() => handleButtonClick(index + 1)}
                   >
                     {t(`mainBanner.${key}`)}
-                  </button>
+                  </Button>
                 ))}
               </div>
-              <Col className="main-banner-btn-contactUs d-none d-lg-block">
-                <Button variant="custom" id="contactUs" href="#requestForm" className="w-lg-50 w-md-100 w-xs-100 m-0">
-                  {t('btn.contactUs')}
-                </Button>
-              </Col>
-            </Col>
-            <Col className="d-flex align-items-center fill" style={{ height: '380px' }}>
               {pageLoaded &&
                 ['btn1', 'btn2', 'btn3', 'btn4'].map((key, index) => (
                   <Card.Text

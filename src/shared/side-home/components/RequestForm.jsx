@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Card, Row, Col, Image, Form, Button } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
@@ -45,9 +45,9 @@ const RequestForm = () => {
   };
 
   return (
-    <Card className="coins mx-2 mt-4 mb-4 w-100" style={{ backgroundColor: '#F6F6F6' }} id="requestForm">
+    <Card className="coins mt-4 mb-4 w-100" style={{ backgroundColor: '#F6F6F6' }} id="requestForm">
       <Card.Body className='p-0 m-0'>
-        <Row className="justify-content-center">
+        <Row className="justify-content-center me-0">
           <Col lg={4} className="d-none d-lg-block">
             <div className="d-flex justify-content-center">
               <Image src="/img/Frame_35.png" fluid />

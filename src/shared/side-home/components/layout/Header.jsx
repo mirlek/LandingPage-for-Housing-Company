@@ -13,7 +13,7 @@ const Header = () => {
 
   return (
     <Container>
-      <Row className="d-flex justify-content-between align-items-center p-4">
+      <Row className="d-flex justify-content-between align-items-center header p-2">
         <Col lg={2} md={2} className="d-none d-lg-block pl-0">
           <Image src="/img/Group_32.png" />
         </Col>

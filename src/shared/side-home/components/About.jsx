@@ -19,7 +19,7 @@ const About = () => {
   const jumpTimes = [1, 45, 87, 131];
 
   return (
-    <Card className="coins mx-3 w-100 mb-4 mt-4">
+    <Card className="coins w-100 mb-4 mt-4">
       <Card.Body className='p-0'>
         <Row>
           <Col className="d-flex justify-content-center mb-4 mt-4">

@@ -29,7 +29,7 @@ const FAQ = () => {
 
   return (
     <>
-      <Card className="coins mx-3 mt-4 mb-3 p-2 w-100">
+      <Card className="coins mt-4 mb-3 p-2 w-100">
         <Card.Body>
           <Col className="d-flex justify-content-center text-center">
             <p style={{ color: '#00AB55' }} className="heading">
@@ -39,7 +39,7 @@ const FAQ = () => {
         </Card.Body>
       </Card>
       {keys.map((key, index) => (
-        <Card className="coins mx-3 mb-3 w-100" key={key}>
+        <Card className="coins mb-3 w-100" key={key}>
           <Card.Body>
             <Row className="d-flex align-items-start p-2">
               <Col xs={10} md={10} lg={10}>
@@ -59,7 +59,7 @@ const FAQ = () => {
                 </div>
               </Col>
               <Col xs={2} md={2} lg={2} className="d-flex justify-content-end align-items-start">
-                <Button onClick={() => toggleExpand(index)} type="button" variant={null} className={"btn btn-link mt-2"}>
+                <Button onClick={() => toggleExpand(index)} type="button" variant={null} className={"btn btn-link m-3"}>
                   <div className="container">
                     <Image src="/img/Dropdown_minus_Button.png" alt="Minus" className='icon minus'/>
                     <Image src="/img/Dropdown_plus_Button.png" alt="Plus" className={`icon ${expandedIndex === index ? 'hidden' : ''}`} />

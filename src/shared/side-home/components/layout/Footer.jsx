@@ -1,4 +1,3 @@
-import React from 'react';
 import { Card, Row, Col, Container, Button } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
@@ -6,57 +5,34 @@ const Footer = () => {
   const { t } = useTranslation();
 
   return (
-    <Card className="coins mx-3 p-3 w-100" style={{ margin: '2rem' }}>
+    <Card className="coins mt-4 p-3 w-100">
       <Card.Body>
-        <Col className="d-flex justify-content-center text-center align-items-center mb-3">
-          <p style={{ color: '#00AB55' }} className="heading">
-            {t('contacts.heading')}
-          </p>
-        </Col>
         <Container>
-          <Row className="mb-3">
-            <Col xs={5} md={5} lg={3} className="contact-column">
-            <Card.Text className="contact-items d-flex align-items-center" style={{ color: '#9A9A9A' }}>
-              <img src={t('contacts.phone_label')} alt="Phone" className="me-2"/> {t('contacts.phone')}
+          <Row className="mb-3 d-flex justify-content-center align-items-center">
+          <Col xs={12} md={4} lg={2} className="text-center text-md-center mb-3">
+            <Card.Text className="d-flex align-items-center justify-content-center justify-content-md-start text-center text-md-center" style={{ color: '#9A9A9A', fontSize: '18px' }}>
+              <img src={t('contacts.phone_label')} alt="Phone" className="me-2" />
+              <span>{t('contacts.phone')}</span>
             </Card.Text>
-              <Card.Text style={{ fontWeight: 'bold' }}>+7 (707) 682-56-76</Card.Text>
-            </Col>
-            {/* <Col xs={6} md={6} lg={3} className="contact-column">
-              <Card.Text className="contact-items d-flex align-items-center justify-content-end justify-content-lg-start" style={{ color: '#9A9A9A' }}>
-                <img src={t('contacts.email_label')} alt="Email" className="me-2"/> {t('contacts.email')}
+            <Card.Text style={{ fontWeight: 'bold' }}>+7 (707) 682-56-76</Card.Text>
+          </Col>
+            <Col xs={12} md={8} lg={10} className="d-flex justify-content-center text-center align-items-center">
+              <Card.Text
+                className="text-content p-3 w-100"
+                style={{
+                  backgroundColor: '#F2F2F2',
+                  border: '1px solid transparent',
+                  borderRadius: '32px',
+                  color: '#9A9A9A',
+                  fontSize: '18px',
+                  lineHeight: '1'
+                }}
+              >
+                {t('contacts.info')}
               </Card.Text>
-              <Card.Text style={{ fontWeight: 'bold' }} className='d-flex justify-content-end justify-content-lg-start'>info@eosi.kz</Card.Text>
-            </Col> */}
-            <Col xs={5} md={5} lg={8} className="contact-column">
-            <Card.Text className="contact-items d-flex align-items-center" style={{ color: '#9A9A9A' }}>
-                <img src={t('contacts.address_label')} alt="Address" className="me-2"/> {t('contacts.address')}
-              </Card.Text>
-              <Card.Text style={{ fontWeight: 'bold' }}>{t('contacts.exactAddress')}</Card.Text>
-            </Col>
-            <Col xs={2} md={2} lg={1} className="d-flex justify-content-end">
-              <Button variant="link" href="https://t.me/your_telegram_link" style={{ display: 'none' }}>
-                <img src={t('contacts.telegram')} alt="Telegram" />
-              </Button>
-              <Button variant="link" href="https://wa.me/77782044493">
-                <img src={t('contacts.whatsapp')} alt="WhatsApp" />
-              </Button>
             </Col>
           </Row>
         </Container>
-        <Col className="d-flex justify-content-center text-center align-items-center">
-          <Card.Text
-            className="text-content mt-3 p-3 w-100"
-            style={{
-              color: '#00000',
-              backgroundColor: '#F2F2F2',
-              border: '1px solid transparent',
-              borderRadius: '32px',
-              fontSize: '18px'
-            }}
-          >
-            {t('contacts.info')}
-          </Card.Text>
-        </Col>
       </Card.Body>
     </Card>
   );
