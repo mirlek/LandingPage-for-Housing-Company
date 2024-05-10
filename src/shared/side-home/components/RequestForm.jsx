@@ -57,10 +57,10 @@ const RequestForm = () => {
             <div>
               <Col className="d-flex justify-content-center text-center">
                 <p style={{ color: '#00AB55' }} className="heading mt-4">
-                  {t('request.heading')}
+                  {t('home:request.heading')}
                 </p>
               </Col>
-              <Card.Text className="d-flex justify-content-center text-center mb-4">{t('request.text')}</Card.Text>
+              <Card.Text className="d-flex justify-content-center text-center mb-4">{t('home:request.text')}</Card.Text>
               <Form className="mt-4">
               <Form.Group controlId="formName">
                 <div className="request-form-icon-input-wrapper">
@@ -99,12 +99,12 @@ const RequestForm = () => {
                   style={{ backgroundColor: formValid ? '#00AB55' : '#CCCCCC' }}
                   onClick={handleSubmit}
                 >
-                  {t('btn.sendrequest')}
+                  {t('home:btn.sendrequest')}
                 </Button>
                 <Card.Text
                   className="d-flex justify-content-center text-center mb-4 mt-2"
                   style={{ color: '#9A9A9A', fontSize: '17px' }}
-                  dangerouslySetInnerHTML={{ __html: t('request.info') }}
+                  dangerouslySetInnerHTML={{ __html: t('home:request.info') }}
                 >
                 </Card.Text>
               </Form>
