@@ -19,12 +19,12 @@ const About = () => {
   const jumpTimes = [1, 45, 87, 131];
 
   return (
-    <Card className="coins mx-3 w-100 mb-4 mt-4">
+    <Card className="coins w-100 mb-4 mt-4">
       <Card.Body className='p-0'>
         <Row>
           <Col className="d-flex justify-content-center mb-4 mt-4">
             <p style={{ color: '#00AB55' }} className="heading">
-              {t('home:about.heading')}
+              {t('about.heading')}
             </p>
           </Col>
         </Row>
@@ -40,12 +40,12 @@ const About = () => {
               />
             </div>
           </Col>
-          <Col sm={12} md={12} lg={4} className="mt-4 d-flex align-items-center">
+          <Col sm={12} md={12} lg={5} className="mt-4 d-flex align-items-center">
             <div>
-              <Card.Text style={{ fontWeight: 'bold', fontSize: '48px', lineHeight: '1' }} className="mb-4">
-                {t(`home:about.title`)}
+              <Card.Text style={{ fontWeight: 'bold', fontSize: '32px', lineHeight: '1' }} className="mb-4">
+                {t(`about.title`)}
               </Card.Text>
-              <Card.Text dangerouslySetInnerHTML={aboutTextHtml} style={{ lineHeight: '1.2', marginBottom: '10px' }} />
+              <Card.Text dangerouslySetInnerHTML={aboutTextHtml} style={{ lineHeight: '1.2', marginBottom: '10px', fontSize: '24px', }} />
             </div>
           </Col>
         </Row>
@@ -53,22 +53,20 @@ const About = () => {
           <Col md={6}>
             {keys.map((key, index) => (
               <Card className="monthly-benefit-card mt-4" key={key}>
-                <Card.Body>
+                <Card.Body className='p-2'>
                   <Row className="d-flex justify-content-between p-0 m-0">
-                    <Col className="d-flex align-items-center m-0">
-                      <Card.Text style={{ fontSize: '24px' }} className="card-text">
+                    <Col className="d-flex align-items-center justify-content-start m-0 p-0">
+                      <Card.Text style={{ fontSize: '24px' }} className="card-text ps-2 pe-2">
                         {numbers[index]}
                       </Card.Text>
-                    </Col>
-                    <Col className="d-flex align-items-center justify-content-start m-0 p-0">
-                      <Col className="d-lg-block d-none m-0 p-0">
-                          <Image src={t(`home:about.pic${key}`)} className="about-image" />
+                      <Col className="d-lg-block d-none ps-2">
+                          <Image src={t(`about.pic${key}`)} className="about-image" />
                       </Col>
-                      <Col>
-                        <Card.Title style={{ fontWeight: 'bold', fontSize: '24px' }} className="card-text">
-                            {t(`home:about.short${key}`)}
+                      <Col style={{ paddingLeft: '24px' }}>
+                        <Card.Title style={{ fontWeight: 'bold'}} className="card-text">
+                            {t(`about.short${key}`)}
                           </Card.Title>
-                        <Card.Text className="text-content">{t(`home:about.timestamp${key}`)}</Card.Text>
+                        <Card.Text className="text-content">{t(`about.timestamp${key}`)}</Card.Text>
                       </Col>
                     </Col>
                     <Col className="d-flex justify-content-end">
@@ -84,22 +82,20 @@ const About = () => {
           <Col md={6}>
             {keys.map((key, index) => (
               <Card className="monthly-benefit-card mt-4" key={key}>
-                <Card.Body>
+                <Card.Body className='p-2'>
                   <Row className="d-flex p-0 m-0">
-                    <Col className="d-flex align-items-center m-0">
-                      <Card.Text style={{ fontSize: '24px' }} className="card-text">
+                    <Col className="d-flex align-items-center justify-content-start m-0 p-0">
+                      <Card.Text style={{ fontSize: '24px' }}  className="card-text ps-2 pe-2">
                         {numbers[index + 2]}
                       </Card.Text>
-                    </Col>
-                    <Col className="d-flex align-items-center justify-content-start m-0 p-0">
-                      <Col className="d-lg-block d-none m-0 p-0">
-                          <Image src={t(`home:about.pic${key + 2}`)} className="about-image" />
+                      <Col className="d-lg-block d-none ps-2">
+                          <Image src={t(`about.pic${key + 2}`)} className="about-image" />
                       </Col>
-                      <Col>
-                        <Card.Title style={{ fontWeight: 'bold', fontSize: '24px' }} className="card-text">
-                            {t(`home:about.short${key + 2}`)}
-                          </Card.Title>
-                        <Card.Text className="text-content">{t(`home:about.timestamp${key + 2}`)}</Card.Text>
+                      <Col style={{ paddingLeft: '24px' }} >
+                        <Card.Title style={{ fontWeight: 'bold' }} className="card-text">
+                            {t(`about.short${key + 2}`)}
+                        </Card.Title>
+                        <Card.Text className="text-content">{t(`about.timestamp${key + 2}`)}</Card.Text>
                       </Col>
                     </Col>
                     <Col className="d-flex justify-content-end">

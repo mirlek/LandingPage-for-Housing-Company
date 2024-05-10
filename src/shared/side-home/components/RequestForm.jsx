@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Card, Row, Col, Image, Form, Button } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
@@ -17,19 +17,26 @@ const RequestForm = () => {
     event.stopPropagation();
     console.log('Ваша заявка отправлена!');
   };
+  
   const handleNameChange = (event) => {
     setName(event.target.value);
-    checkFormValidity();
   };
 
+  const handlePhoneFocus = () => {
+    if (!phone.startsWith('+7') && !phone.startsWith('7')) {
+      setPhone('+7' + phone);
+    }
+  };
   const handlePhoneChange = (event) => {
-    const newPhone = event.target.value;
+    let newPhone = event.target.value;
+    if (!newPhone.startsWith('+7')) { newPhone = '+7' + newPhone.substring(2); }
     setPhone(newPhone);
-    checkFormValidity(newPhone);
   };
-
-  const checkFormValidity = (phone) => {
-    const phoneRegex = /^(?:\+7|7|8)[0-9]{10}$/;
+  
+  useEffect(() => {checkFormValidity()}, [name, phone]);
+  
+  const checkFormValidity = () => {
+    const phoneRegex = /^(?:\+7|7)[0-9]{10}$/;
     if (name && name.trim() !== '' && phone && phone.trim().match(phoneRegex)) {
       setFormValid(true);
     } else {
@@ -38,9 +45,9 @@ const RequestForm = () => {
   };
 
   return (
-    <Card className="coins mx-2 mt-4 mb-4 w-100" style={{ backgroundColor: '#F6F6F6' }} id="requestForm">
+    <Card className="coins mt-4 mb-4 w-100" style={{ backgroundColor: '#F6F6F6' }} id="requestForm">
       <Card.Body className='p-0 m-0'>
-        <Row className="justify-content-center">
+        <Row className="justify-content-center me-0">
           <Col lg={4} className="d-none d-lg-block">
             <div className="d-flex justify-content-center">
               <Image src="/img/Frame_35.png" fluid />
@@ -55,7 +62,11 @@ const RequestForm = () => {
               </Col>
               <Card.Text className="d-flex justify-content-center text-center mb-4">{t('home:request.text')}</Card.Text>
               <Form className="mt-4">
-                <Form.Group controlId="formName">
+              <Form.Group controlId="formName">
+                <div className="request-form-icon-input-wrapper">
+                  <div className="request-form-icon-wrapper">
+                    <Image src="\img\primary_2.png" alt="User Icon" className="request-form-icon" />
+                  </div>
                   <Form.Control
                     type="text"
                     placeholder="Имя"
@@ -63,16 +74,23 @@ const RequestForm = () => {
                     onChange={handleNameChange}
                     className="form-submit"
                   />
-                </Form.Group>
-                <Form.Group controlId="formPhone">
+                </div>
+              </Form.Group>
+              <Form.Group controlId="formPhone">
+                <div className="request-form-icon-input-wrapper">
+                  <div className="request-form-icon-wrapper">
+                    <Image src="\img\call.png" alt="User Icon" className="request-form-icon" />
+                  </div>
                   <Form.Control
                     type="tel"
                     placeholder="Номер телефона"
                     value={phone}
+                    onFocus={handlePhoneFocus}
                     onChange={handlePhoneChange}
                     className="form-submit"
                   />
-                </Form.Group>
+                </div>
+              </Form.Group>
                 <Button
                   variant="custom"
                   id="send-request"

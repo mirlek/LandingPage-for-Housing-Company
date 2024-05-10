@@ -29,45 +29,41 @@ const FAQ = () => {
 
   return (
     <>
-      <Card className="coins mx-3 mt-4 mb-3 p-2 w-100">
+      <Card className="coins mt-4 mb-3 p-2 w-100">
         <Card.Body>
           <Col className="d-flex justify-content-center text-center">
             <p style={{ color: '#00AB55' }} className="heading">
-              {t('home:faq.heading')}
+              {t('faq.heading')}
             </p>
           </Col>
         </Card.Body>
       </Card>
       {keys.map((key, index) => (
-        <Card className="coins mx-3 mb-3 w-100" key={key}>
+        <Card className="coins mb-3 w-100" key={key}>
           <Card.Body>
-            <Row className="d-flex align-items-start">
-              <Col xs={1} md={1} lg={1} className="d-flex justify-content-center mt-3">
-                <Card.Title style={{ fontWeight: 'bold', fontSize: '24px', color: '#9A9A9A' }} className="text-content">
-                  {t(`home:faq.num${key}`)}
-                </Card.Title>
-              </Col>
-              <Col xs={9} md={9} lg={10}>
-                <Card.Text style={{ fontWeight: 'bold', fontSize: '32px' }} className="text-content p-0 m-0 mt-3">
-                  {faqData[key].title}
-                </Card.Text>
+            <Row className="d-flex align-items-start p-2">
+              <Col xs={10} md={10} lg={10}>
+                <Button onClick={() => toggleExpand(index)} type="button" variant={null} className='btn'>
+                  <Card.Text style={{ fontWeight: 'bold', fontSize: '32px', textAlign: 'start' }} className="text-content p-0 m-0 mt-3">
+                    {faqData[key].title}
+                  </Card.Text>   
+                </Button>             
                 <div className={`text-container ${expandedIndex === index ? 'open' : ''} mt-3`}>
                   <div dangerouslySetInnerHTML={{ __html: faqData[key].text }} />
                   {index === 0 && (
                     <Button variant="link" href={faqData.youtubeLinkFAQ} target="_blank" className="ourbenefits-download-btns">
-                      <img src={t('home:faq.picvideo')} className="d-none d-md-inline me-2" />
-                      {t('home:ourbenefits.video')}
+                      <img src={t('faq.picvideo')} className="d-none d-md-inline me-2" />
+                      {t('ourbenefits.video')}
                     </Button>
                   )}
                 </div>
               </Col>
-              <Col xs={1} md={1} lg={1} className="d-flex justify-content-end align-items-start">
-                <Button onClick={() => toggleExpand(index)} type="button" variant={null} className="btn btn-link mt-1">
-                  <Image
-                    src={expandedIndex === index ? '/img/Dropdown_minus_Button.png' : '/img/Dropdown_Button.png'}
-                    alt="Expand/Collapse"
-                    className={`img-fluid img-xs img-md ${isRotated ? 'rotate180' : ''}`}
-                  />
+              <Col xs={2} md={2} lg={2} className="d-flex justify-content-end align-items-start">
+                <Button onClick={() => toggleExpand(index)} type="button" variant={null} className={"btn btn-link m-3"}>
+                  <div className="container">
+                    <Image src="/img/Dropdown_minus_Button.png" alt="Minus" className='icon minus'/>
+                    <Image src="/img/Dropdown_plus_Button.png" alt="Plus" className={`icon ${expandedIndex === index ? 'hidden' : ''}`} />
+                  </div>
                 </Button>
               </Col>
             </Row>

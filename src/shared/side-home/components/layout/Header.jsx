@@ -13,7 +13,7 @@ const Header = () => {
 
   return (
     <Container>
-      <Row className="d-flex justify-content-between align-items-center p-4">
+      <Row className="d-flex justify-content-between align-items-center header p-2">
         <Col lg={2} md={2} className="d-none d-lg-block pl-0">
           <Image src="/img/Group_32.png" />
         </Col>
@@ -25,9 +25,11 @@ const Header = () => {
               arrow={false} 
             >
               <div className="phone me-4">
+              <a href="tel:+77076825676">
                 <FontAwesomeIcon icon={faPhoneVolume} className="me-2" />
-                +7(707)682-56-76
+                  +7(707)682-56-76
                 <FontAwesomeIcon icon={faCircleInfo} className="ms-2" />
+              </a>
               </div>
             </OverlayTrigger>
             <LanguageSelector className="mr-3" />

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Card, Row, Col, Image } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
@@ -6,7 +5,7 @@ const Partners = () => {
   const { t } = useTranslation();
 
   return (
-    <Card className="coins mx-3 mt-4 p-3 w-100">
+    <Card className="coins mt-4 p-3 w-100">
       <Card.Body>
         <Col className="d-flex justify-content-center text-center">
           <p style={{ color: '#00AB55' }} className="heading">
