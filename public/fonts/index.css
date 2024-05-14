@@ -17,7 +17,7 @@
   src: local('CircularStd'), url('CircularStd-Bold.otf') format('opentype');
 }
 @font-face {
-  font-family: 'PublicSans';
+  font-family: 'Public Sans';
   font-weight: 400;
   font-style: normal;
   src: local('Public Sans'), url('PublicSans-Regular.otf') format('opentype');
