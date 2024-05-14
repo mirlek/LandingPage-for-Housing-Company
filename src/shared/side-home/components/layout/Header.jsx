@@ -18,7 +18,7 @@ const Header = () => {
           <div className="d-flex align-items-center justify-content-end">
             <OverlayTrigger
               placement="bottom"
-              overlay={<Tooltip id="tooltip-inner">Номер телефона предназначен только для связи с председателем</Tooltip>}
+              overlay={<Tooltip id="tooltip-inner">Данная линия только для председателей.<br />Жильцы обращаются напрямую к своему председателю.</Tooltip>}
               arrow={false} 
             >
               <div className="phone me-4">
@@ -31,7 +31,7 @@ const Header = () => {
             </OverlayTrigger>
             <LanguageSelector className="mr-3" />
             <NavLink className={'button contained'} to={PATH_AUTH.login}>
-              <Button variant="custom">
+              <Button variant="custom" id='login-btn'>
                 <span>
                   <TranslatedToken id={tokens.common.login} />
                 </span>

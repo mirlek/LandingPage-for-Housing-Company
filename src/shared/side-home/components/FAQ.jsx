@@ -42,12 +42,19 @@ const FAQ = () => {
         <Card className="coins mb-3 w-100" key={key}>
           <Card.Body>
             <Row className="d-flex align-items-start p-2">
-              <Col xs={10} md={10} lg={10}>
-                <Button onClick={() => toggleExpand(index)} type="button" variant={null} className='btn'>
-                  <Card.Text style={{ fontWeight: 'bold', fontSize: '32px', textAlign: 'start' }} className="text-content p-0 m-0 mt-3">
-                    {faqData[key].title}
-                  </Card.Text>   
-                </Button>             
+              <Button onClick={() => toggleExpand(index)} type="button" variant={null} className='btn d-flex align-items-center'>
+                  <Col>
+                    <Card.Text style={{ fontWeight: 'bold', fontSize: '32px', textAlign: 'start' }} className="text-content p-0 m-0 mt-3">
+                      {faqData[key].title}
+                    </Card.Text> 
+                  </Col>
+                  <Col>
+                    <div className="container d-flex justify-content-end">
+                      <Image src="/img/Dropdown_minus_Button.png" alt="Minus" className='icon minus'/>
+                      <Image src="/img/Dropdown_plus_Button.png" alt="Plus" className={`icon ${expandedIndex === index ? 'hidden' : ''}`} />
+                    </div>
+                  </Col> 
+                </Button> 
                 <div className={`text-container ${expandedIndex === index ? 'open' : ''} mt-3 ms-2`}>
                   <div dangerouslySetInnerHTML={{ __html: faqData[key].text }} />
                   {index === 0 && (
@@ -63,15 +70,6 @@ const FAQ = () => {
                     </Button>
                   )}
                 </div>
-              </Col>
-              <Col xs={2} md={2} lg={2} className="d-flex justify-content-end align-items-start">
-                <Button onClick={() => toggleExpand(index)} type="button" variant={null} className={"btn btn-link m-3"}>
-                  <div className="container">
-                    <Image src="/img/Dropdown_minus_Button.png" alt="Minus" className='icon minus'/>
-                    <Image src="/img/Dropdown_plus_Button.png" alt="Plus" className={`icon ${expandedIndex === index ? 'hidden' : ''}`} />
-                  </div>
-                </Button>
-              </Col>
             </Row>
           </Card.Body>
         </Card>

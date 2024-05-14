@@ -57,7 +57,7 @@ const OurBenefits = () => {
                             download
                             className="ourbenefits-download-btns"
                           >
-                            <img src={t('faq.picdocument')} alt="Document Icon" className="d-none d-md-inline ms-1" style={{width: '28px'}}/>
+                            <img src={t('faq.picdocument')} alt="Document Icon" className="d-none d-md-inline me-1" style={{width: '28px'}}/>
                             {t('ourbenefits.option2')}
                           </Button>
                           <Button
@@ -66,7 +66,7 @@ const OurBenefits = () => {
                             download
                             className="ourbenefits-download-btns"
                           >
-                            <img src={t('faq.picdocument')} alt="Document Icon" className="d-none d-md-inline ms-1" style={{width: '28px'}}/>
+                            <img src={t('faq.picdocument')} alt="Document Icon" className="d-none d-md-inline me-1" style={{width: '28px'}}/>
                             {t('ourbenefits.option3')}
                           </Button>
                         </div>
@@ -82,7 +82,7 @@ const OurBenefits = () => {
                           <img
                             src={index === 2 ? t('faq.picvideo') : t('faq.picdocument')}
                             alt={index === 2 ? 'Video Icon' : 'Document Icon'}
-                            className="d-none d-md-inline ms-1" style={{width: '28px'}}
+                            className="d-none d-md-inline me-1" style={{width: '28px'}}
                           />
                           {index === 2 ? t(`ourbenefits.video`) : t(`ourbenefits.option${key}`)}
                         </Button>

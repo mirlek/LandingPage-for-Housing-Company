@@ -230,6 +230,10 @@ button {
 .btn:first-child:active{
   border-color: transparent;
 }
+#login-btn:hover{
+  background-color: #00AB55 !important; 
+  color: #ffffff !important; 
+}
 #bannerBtns{
   background-color: #F6F6F6; 
   color: #000000; 
@@ -299,6 +303,7 @@ button {
   font-size: 11px;
   text-align: left;
   margin-left: 8rem;
+  max-width: 240px;
 }
 .tooltip {
   --bs-tooltip-arrow-width: 0em;
@@ -412,7 +417,6 @@ button {
   border: 1px solid white;
   border-radius: 24px;
 }
-
 .img-video iframe {
   position: absolute;
   top: 0;
@@ -423,7 +427,6 @@ button {
 .request-form-icon-input-wrapper {
   position: relative;
 }
-
 .request-form-icon-wrapper {
   position: absolute;
   left: 24px;
@@ -436,7 +439,6 @@ button {
   transition: filter 0.3s ease;
   filter: brightness(0);
 }
-
 .form-submit{
   background-color: #F6F6F6;
   border: 1px solid #F6F6F6;
@@ -459,12 +461,10 @@ button {
   overflow: hidden;
   transition: max-height 0.7s ease-in-out;
 }
-
 .text-container.open {
   max-height: 1500px; 
   animation: fadeIn 0.7s ease-in-out; 
 }
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -479,6 +479,9 @@ button {
   text-decoration: underline;
   font-size: 22px;
   padding-left: 0;
+}
+.btn-link:hover {
+  color: #00AB55 !important;
 }
 .our-benefits-heading{
   font-weight: bold; 
@@ -506,7 +509,6 @@ button {
   transition: transform 0.4s ease, opacity 0.4s ease; 
   position: absolute; 
 }
-
 .hidden {
   opacity: 0; 
   pointer-events: none;
