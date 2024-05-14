@@ -39,7 +39,7 @@ const MainBannerCard = () => {
                 </Button>
               </Col>
             </Col>
-            <Col lg={7} className="fill" style={{ height: '350px' }}>
+            <Col lg={7} className="fill" style={{ height: '310px', maxHeight: '310px' }}>
             <div className="d-lg-flex flex-wrap d-none align-items-center mb-4">
               <p style={{ fontSize: '18px' }}>{t('mainBanner.btntitle')}</p>
                 {['btn1', 'btn2', 'btn3', 'btn4'].map((key, index) => (
@@ -72,7 +72,8 @@ const MainBannerCard = () => {
                 ))}
               {!activeButton && (
                 <Card.Text dangerouslySetInnerHTML={{ __html: t('mainBanner.btntext') }}  
-                  className={`d-inline ${!activeButton && !animationStarted ? 'slide-in' : ''}`}/>
+                  className={`d-md-inline d-lg-inline d-xl-inline d-xxl-inline custom-text ${!activeButton && !animationStarted ? 'slide-in' : ''}`}
+                  style={{ lineHeight: '1.2' }}/>
               )}
             </Col>
             <Col className="main-banner-btn-contactUs d-lg-none"> 

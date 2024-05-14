@@ -18,8 +18,8 @@ const MainPage = () => (
     <Coins />
     <MontlyBenefits />
     <Partners />
-    <FAQ />
     <RequestForm />
+    <FAQ />
     <Map />
     <Footer />
   </PageLayout>

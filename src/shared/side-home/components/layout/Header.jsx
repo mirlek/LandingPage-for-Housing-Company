@@ -12,7 +12,7 @@ const Header = () => {
   const { t } = useTranslation();
 
   return (
-    <Container>
+    <Container className='p-0'>
       <Row className="d-flex justify-content-between align-items-center header p-2">
         <Col lg={2} md={2} className="d-none d-lg-block pl-0">
           <Image src="/img/Group_32.png" />
@@ -60,10 +60,10 @@ const Header = () => {
               placement="bottom"
               overlay={<Tooltip id="tooltip-phone">Номер телефона предназначен только для связи с председателем</Tooltip>}
             >
-              <div className="phone">
-                <FontAwesomeIcon icon={faPhoneVolume} className="mr-2" />
+              <div className="phone" style={{fontSize: '17px'}}>
+                <FontAwesomeIcon icon={faPhoneVolume} className="me-2"/>
                 +7(707)682-56-76
-                <FontAwesomeIcon icon={faCircleInfo} className="ml-2" />
+                <FontAwesomeIcon icon={faCircleInfo} className="ms-2"/>
               </div>
             </OverlayTrigger>
           </div>

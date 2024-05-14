@@ -48,7 +48,7 @@ const FAQ = () => {
                     {faqData[key].title}
                   </Card.Text>   
                 </Button>             
-                <div className={`text-container ${expandedIndex === index ? 'open' : ''} mt-3`}>
+                <div className={`text-container ${expandedIndex === index ? 'open' : ''} mt-3 ms-2`}>
                   <div dangerouslySetInnerHTML={{ __html: faqData[key].text }} />
                   {index === 0 && (
                     <Button variant="link" href={faqData.youtubeLinkFAQ} target="_blank" className="ourbenefits-download-btns">

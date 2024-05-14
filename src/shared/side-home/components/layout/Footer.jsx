@@ -9,8 +9,8 @@ const Footer = () => {
       <Card.Body>
         <Container>
           <Row className="mb-3 d-flex justify-content-center align-items-center">
-          <Col xs={12} md={4} lg={2} className="text-center text-md-center mb-3">
-            <Card.Text className="d-flex align-items-center justify-content-center justify-content-md-start text-center text-md-center" style={{ color: '#9A9A9A', fontSize: '18px' }}>
+          <Col xs={12} md={4} lg={2} className="mb-3 text-center text-md-start">
+            <Card.Text className="d-flex justify-content-center justify-content-md-start" style={{ color: '#9A9A9A', fontSize: '18px' }}>
               <img src={t('contacts.phone_label')} alt="Phone" className="me-2" />
               <span>{t('contacts.phone')}</span>
             </Card.Text>
@@ -24,7 +24,7 @@ const Footer = () => {
                   border: '1px solid transparent',
                   borderRadius: '32px',
                   color: '#9A9A9A',
-                  fontSize: '18px',
+                  fontSize: '17px',
                   lineHeight: '1'
                 }}
               >

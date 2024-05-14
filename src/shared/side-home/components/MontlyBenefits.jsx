@@ -9,6 +9,11 @@ const MontlyBenefits = () => {
   return (
     <Card className="coins p-3 w-100">
       <Card.Body className='pb-2'>
+        <Col className="d-flex justify-content-center text-center mb-4">
+          <p style={{ color: '#00AB55' }} className="heading">
+            {t('montlybenefits.heading')}
+          </p>
+        </Col>
         <Row>
           {keys.slice(0, 3).map((key) => (
             <Col sm={12} md={12} lg={4} key={key}>

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { SettingsStore } from '@mobx/services/SettingsStore';
 import { observer } from 'mobx-react-lite';
@@ -28,7 +28,7 @@ const LanguageSelector = observer(() => {
   };
 
   return (
-    <div className="d-flex align-items-center">
+    <div className="d-flex align-items-center language-buttons">
       <button type={'button'} ref={ruButtonRef} onClick={() => changeLanguage(LOCALES.RU)} className="pl-0">
         RU
       </button>

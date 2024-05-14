@@ -21,6 +21,9 @@ body {
   .heading {
     font-size: 24px !important;
   }
+  .language-buttons{
+    font-size: 17px !important;
+  }
   .our-benefits-heading{
     font-size: 18px !important;
   }
@@ -148,6 +151,11 @@ body {
   }
   .main-banner-btn-contactUs{
     margin-top: 1rem;
+  }
+}
+@media (max-width: 1439.98px) {
+  .d-lg-flex {
+    display: none !important;
   }
 }
 button {
@@ -284,7 +292,6 @@ button {
   border: 1px solid transparent;
   border-radius: 32px;
 }
-
 .heading {
   font-weight: bold; 
   font-size: 48px; 

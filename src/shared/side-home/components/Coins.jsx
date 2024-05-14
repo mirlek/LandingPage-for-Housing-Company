@@ -5,7 +5,7 @@ const Coins = () => {
   const { t } = useTranslation();
 
   return (
-    <Card className="coins mt-4 mb-4 w-100">
+    <Card className="coins mb-4 w-100">
       <Card.Body>
         <Row className="d-flex justify-content-center align-items-center">
             <Col xs={12} md={3} lg={2} className="text-center">
