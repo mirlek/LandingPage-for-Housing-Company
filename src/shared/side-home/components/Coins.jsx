@@ -16,11 +16,11 @@ const Coins = () => {
             <Col xs={12} md={8} lg={7} className="text-center text-md-start mb-3 mt-3">
             <div>
               <Card.Title>
-                <p className="heading p-0 mb-4" style={{ fontSize: '32px' }}>
+                <p className="heading p-0 mb-2" style={{ fontSize: '32px', fontWeight: '700' }}>
                 {t('coins.heading')}
                 </p>
               </Card.Title>
-              <Card.Text style={{ lineHeight: '1' }}>{t('coins.text')}</Card.Text>
+              <Card.Text style={{ lineHeight: '140%', fontSize: '21px', letterSpacing: '1%' }}>{t('coins.text')}</Card.Text>
             </div>
             </Col>
             <Col xs={12} md={12} lg={3}>

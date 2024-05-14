@@ -57,15 +57,15 @@ const RequestForm = () => {
             <div>
               <Col className="d-flex justify-content-center text-center">
                 <p style={{ color: '#00AB55' }} className="heading mt-4">
-                  {t('home:request.heading')}
+                  {t('request.heading')}
                 </p>
               </Col>
-              <Card.Text className="d-flex justify-content-center text-center mb-4">{t('home:request.text')}</Card.Text>
+              <Card.Text className="d-flex justify-content-center text-center mb-4" style={{ lineHeight: '140%', fontSize: '22px', letterSpacing: '1%' }}>{t('request.text')}</Card.Text>
               <Form className="mt-4">
                 <Form.Group controlId="formName">
                   <div className="request-form-icon-input-wrapper">
                     <div className="request-form-icon-wrapper">
-                      <Image src="\img\primary_2.png" alt="User Icon" className="request-form-icon" />
+                      <Image src="\img\user.png" alt="User Icon" className="request-form-icon" />
                     </div>
                     <Form.Control
                       type="text"
@@ -79,7 +79,7 @@ const RequestForm = () => {
                 <Form.Group controlId="formPhone">
                   <div className="request-form-icon-input-wrapper">
                     <div className="request-form-icon-wrapper">
-                      <Image src="\img\call.png" alt="User Icon" className="request-form-icon" />
+                      <Image src="\img\call_11.png" alt="User Icon" className="request-form-icon" />
                     </div>
                     <Form.Control
                       type="tel"
@@ -99,11 +99,11 @@ const RequestForm = () => {
                   style={{ backgroundColor: formValid ? '#00AB55' : '#CCCCCC' }}
                   onClick={handleSubmit}
                 >
-                  {t('home:btn.sendrequest')}
+                  {t('btn.sendrequest')}
                 </Button>
                 <Card.Text
                   className="d-flex justify-content-center text-center mb-4 mt-2"
-                  style={{ color: '#9A9A9A', fontSize: '17px' }}
+                  style={{ color: '#9A9A9A', fontSize: '17px', fontWeight: '500' }}
                   dangerouslySetInnerHTML={{ __html: t('request.info') }}>
                 </Card.Text>
               </Form>

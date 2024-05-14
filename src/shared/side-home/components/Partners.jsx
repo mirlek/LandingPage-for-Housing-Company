@@ -9,7 +9,7 @@ const Partners = () => {
       <Card.Body>
         <Col className="d-flex justify-content-center text-center">
           <p style={{ color: '#00AB55' }} className="heading">
-            {t('home:partners')}
+            {t('partners')}
           </p>
         </Col>
         <Row className="d-flex justify-content-center align-items-baseline mt-4 mb-4">

@@ -13,14 +13,14 @@ const LanguageSelector = observer(() => {
 
   useEffect(() => {
     const currentLanguage = i18n.language;
-    ruButtonRef.current.style.color = currentLanguage === 'ru' ? 'white' : 'gray';
-    kzButtonRef.current.style.color = currentLanguage === 'kz' ? 'white' : 'gray';
+    ruButtonRef.current.style.color = currentLanguage === 'ru' ? 'white' : 'rgba(255, 255, 255, 0.5)';
+    kzButtonRef.current.style.color = currentLanguage === 'kz' ? 'white' : 'rgba(255, 255, 255, 0.5)';
   }, [i18n.language]);
 
   const changeLanguage = (lng) => {
     settingsStore.changeLanguage(lng);
-    ruButtonRef.current.style.color = lng === LOCALES.RU ? 'white' : 'gray';
-    kzButtonRef.current.style.color = lng === LOCALES.KZ ? 'white' : 'gray';
+    ruButtonRef.current.style.color = lng === LOCALES.RU ? 'white' : 'rgba(255, 255, 255, 0.5)';
+    kzButtonRef.current.style.color = lng === LOCALES.KZ ? 'white' : 'rgba(255, 255, 255, 0.5)';
 
     const locale = lng === LOCALES.RU ? 'ru' : 'kz';
 
@@ -29,11 +29,11 @@ const LanguageSelector = observer(() => {
 
   return (
     <div className="d-flex align-items-center language-buttons">
-      <button type={'button'} ref={ruButtonRef} onClick={() => changeLanguage(LOCALES.RU)} className="pl-0">
+      <button type={'button'} ref={ruButtonRef} onClick={() => changeLanguage(LOCALES.RU)} className="pl-0" style={{fontSize: '17px', fontWeight: '600'}}>
         RU
       </button>
       <div className="vl" />
-      <button type={'button'} ref={kzButtonRef} onClick={() => changeLanguage(LOCALES.KZ)} className="pr-0">
+      <button type={'button'} ref={kzButtonRef} onClick={() => changeLanguage(LOCALES.KZ)} className="pr-0" style={{fontSize: '17px', fontWeight: '600'}}>
         KZ
       </button>
     </div>

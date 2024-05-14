@@ -1,8 +1,5 @@
-import React from 'react';
 import { Col, Button, OverlayTrigger, Tooltip, Image, Container, Row } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhoneVolume, faCircleInfo } from '@fortawesome/free-solid-svg-icons';
 import { PATH_AUTH } from '@app/routes/paths';
 import { tokens, TranslatedToken } from '@shared/utils/i18n';
 import { NavLink } from 'react-router-dom';
@@ -15,20 +12,20 @@ const Header = () => {
     <Container className='p-0'>
       <Row className="d-flex justify-content-between align-items-center header p-2">
         <Col lg={2} md={2} className="d-none d-lg-block pl-0">
-          <Image src="/img/Group_32.png" />
+          <Image src="/img/logo.png" className='logo'/>
         </Col>
         <Col lg={10} md={10} className="d-none d-lg-block">
-          <div className="d-flex align-items-baseline justify-content-end">
+          <div className="d-flex align-items-center justify-content-end">
             <OverlayTrigger
               placement="bottom"
               overlay={<Tooltip id="tooltip-inner">Номер телефона предназначен только для связи с председателем</Tooltip>}
               arrow={false} 
             >
               <div className="phone me-4">
-              <a href="tel:+77076825676">
-                <FontAwesomeIcon icon={faPhoneVolume} className="me-2" />
-                  +7(707)682-56-76
-                <FontAwesomeIcon icon={faCircleInfo} className="ms-2" />
+              <a href="tel:+77076825676" className="d-flex align-items-center justify-content-end p-0">
+                <Image src="/img/call-new.png" className="me-2 itooltip"/>
+                  <p className='phone-number' style={{fontWeight: '600'}}>+7 (707) 682-56-76</p>
+                <Image src="/img/itooltip.png" className="ms-2 itooltip" />
               </a>
               </div>
             </OverlayTrigger>
@@ -44,13 +41,13 @@ const Header = () => {
         </Col>
 
         <Col xs={12} className="d-block d-lg-none p-0">
-          <div className="d-flex justify-content-between">
+          <div className="d-flex justify-content-between align-items-center">
             <div>
-              <Image src="/img/Group_32.png" />
+              <Image src="/img/logo.png"  className='logo'/>
             </div>
             <div>
               <Button variant="custom" id="loginBtn">
-                {t('home:btn.login')}
+                {t('btn.login')}
               </Button>
             </div>
           </div>
@@ -61,16 +58,17 @@ const Header = () => {
               overlay={<Tooltip id="tooltip-phone">Номер телефона предназначен только для связи с председателем</Tooltip>}
             >
               <div className="phone" style={{fontSize: '17px'}}>
-                <FontAwesomeIcon icon={faPhoneVolume} className="me-2"/>
-                +7(707)682-56-76
-                <FontAwesomeIcon icon={faCircleInfo} className="ms-2"/>
+                <a href="tel:+77076825676" className="d-flex align-items-center justify-content-end">
+                  <Image src="/img/call-new.png" className="me-2 itooltip" />
+                    +7 (707) 682-56-76
+                  <Image src="/img/itooltip.png" className="ms-2 itooltip" />
+                </a>
               </div>
             </OverlayTrigger>
           </div>
         </Col>
       </Row>
     </Container>
-    
   );
 };
 

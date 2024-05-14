@@ -29,7 +29,7 @@ const Map = () => {
         <Row className="justify-content-center text-center align-items-center mb-3">
           <Col>
             <p style={{ color: '#00AB55' }} className="heading">
-              {t('home:map.heading')}
+              {t('map.heading')}
             </p>
           </Col>
         </Row>
@@ -44,7 +44,7 @@ const Map = () => {
                   style={{ fontWeight: 'bold' }}
                   disabled
                 >
-                  {t(`home:map.${city}`)}
+                  {t(`map.${city}`)}
                 </Button>
               ))}
             </Col>
