@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card, Row, Col, Button, Image } from 'react-bootstrap';
+import { Card, Row, Col, Button, Image, Container } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
 const FAQ = () => {
@@ -40,36 +40,43 @@ const FAQ = () => {
       </Card>
       {keys.map((key, index) => (
         <Card className="coins mb-3 w-100" key={key}>
-          <Card.Body>
+          <Card.Body className='p-0'>
             <Row className="d-flex align-items-start p-2">
               <Button onClick={() => toggleExpand(index)} type="button" variant={null} className='btn d-flex align-items-center'>
-                  <Col>
-                    <Card.Text style={{ fontWeight: 'bold', fontSize: '32px', textAlign: 'start' }} className="text-content p-0 m-0 mt-3">
+                <Container>
+                  <Row>
+                  <Col lg={10}  sm={10}>
+                    <Card.Text style={{ fontWeight: 'bold', fontSize: '32px', textAlign: 'start' }} className="text-content p-0 m-0 mt-2 ps-4 faq-text-content">
                       {faqData[key].title}
                     </Card.Text> 
                   </Col>
-                  <Col>
-                    <div className="container d-flex justify-content-end">
+                  <Col lg={2} sm={2}>
+                    <div className="icon-container d-flex justify-content-end align-items-center">
                       <Image src="/img/Dropdown_minus_Button.png" alt="Minus" className='icon minus'/>
                       <Image src="/img/Dropdown_plus_Button.png" alt="Plus" className={`icon ${expandedIndex === index ? 'hidden' : ''}`} />
                     </div>
-                  </Col> 
+                  </Col>
+                  </Row>
+                </Container>
                 </Button> 
-                <div className={`text-container ${expandedIndex === index ? 'open' : ''} mt-3 ms-2`}>
-                  <div dangerouslySetInnerHTML={{ __html: faqData[key].text }} />
-                  {index === 0 && (
-                    <Button variant="link" href={t(`faq.youtubeLinkFAQ`)} target="_blank" className="ourbenefits-download-btns">
-                      <img src={t('faq.picvideo')} className="d-none d-md-inline me-2" style={{width: '28px'}}/>
-                      {t('ourbenefits.video')}
-                    </Button>
-                  )}
-                  {index === 1 && (
-                    <Button variant="link" href={t(`faq.form`)} download target="_blank" className="ourbenefits-download-btns">
-                      <img src={t('faq.picdocument')} className="d-none d-md-inline me-2" style={{width: '28px'}}/>
-                      {t('faq.formtitle')}
-                    </Button>
-                  )}
-                </div>
+                <Col>
+                    <div className={`text-container ${expandedIndex === index ? 'open' : ''} ms-2`}>
+                    <div dangerouslySetInnerHTML={{ __html: faqData[key].text }} className='px-4'/>
+                    {index === 0 && (
+                      <Button variant="link" href={t(`faq.youtubeLinkFAQ`)} target="_blank" className="ourbenefits-download-btns">
+                        <img src={t('faq.picvideo')} className="d-none d-md-inline me-2" style={{width: '28px'}}/>
+                        {t('ourbenefits.video')}
+                      </Button>
+                    )}
+                    {index === 1 && (
+                      <Button variant="link" href={t(`faq.form`)} download target="_blank" className="ourbenefits-download-btns">
+                        <img src={t('faq.picdocument')} className="d-none d-md-inline me-2" style={{width: '28px'}}/>
+                        {t('faq.formtitle')}
+                      </Button>
+                    )}
+                  </div>
+                  </Col>
+                
             </Row>
           </Card.Body>
         </Card>

@@ -73,7 +73,7 @@ const MainBannerCard = () => {
               {!activeButton && (
                 <Card.Text dangerouslySetInnerHTML={{ __html: t('mainBanner.btntext') }}  
                   className={`d-md-inline d-lg-inline d-xl-inline d-xxl-inline custom-text ${!activeButton && !animationStarted ? 'slide-in' : ''}`}
-                  style={{ lineHeight: '1.2' }}/>
+                  style={{ lineHeight: '140%' }}/>
               )}
             </Col>
             <Col className="main-banner-btn-contactUs d-lg-none"> 

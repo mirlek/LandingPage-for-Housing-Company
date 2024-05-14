@@ -75,6 +75,15 @@ body {
   .request-form-icon-wrapper {
     width: 8% !important;
   }
+  .icon-container{
+    margin-top: 0px !important;
+  }
+  .icon{
+    margin-bottom: 45px !important;
+  }
+  .faq-text-content{
+    width: 250px !important;
+  }
 }
 @media (max-width: 767.98px) {
   .header{
@@ -168,6 +177,9 @@ body {
     width: 24px !important;
     height: 24px !important;
   }
+  .icon-container{
+    margin-top: 24px !important;
+  }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .custom-text {
@@ -186,6 +198,9 @@ body {
   }
   .main-banner-btn-contactUs{
     margin-top: 1rem;
+  }
+  .icon-container{
+    margin-top: 18px !important;
   }
 }
 @media (max-width: 1439.98px) {
@@ -502,6 +517,9 @@ button {
 }
 .main-banner-btn-contactUs{
   margin-top: 3em;
+}
+.icon-container{
+  margin-top: 32px;
 }
 .icon {
   width: 32px;
