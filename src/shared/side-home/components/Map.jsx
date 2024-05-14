@@ -24,12 +24,12 @@ const Map = () => {
   }, []);
   
   return (
-    <Card className="coins w-100 mt-2">
+    <Card className="coins w-100 mt-4">
       <Card.Body>
         <Row className="justify-content-center text-center align-items-center mb-3">
           <Col>
             <p style={{ color: '#00AB55' }} className="heading">
-              {t('home:map.heading')}
+              {t('map.heading')}
             </p>
           </Col>
         </Row>
@@ -44,7 +44,7 @@ const Map = () => {
                   style={{ fontWeight: 'bold' }}
                   disabled
                 >
-                  {t(`home:map.${city}`)}
+                  {t(`map.${city}`)}
                 </Button>
               ))}
             </Col>
@@ -52,13 +52,14 @@ const Map = () => {
         ) : (
           <Row className="mb-3">
             <Col className="d-flex justify-content-center mb-3">
-              <iframe 
+            <iframe src="https://www.google.com/maps/d/embed?mid=1xob9Q9un2UzpzCHpNabj2HiwAmOKfw8&ehbc=2E312F" width={'100%'} allowFullScreen height="700"></iframe>
+              {/* <iframe 
                 src="https://www.google.com/maps/d/embed?mid=1xob9Q9un2UzpzCHpNabj2HiwAmOKfw8&ehbc=2E312F" 
                 width={'100%'} 
                 height="480" 
                 style={{ border: 0 }}
                 allowFullScreen
-                loading="lazy"></iframe>
+                loading="lazy"></iframe> */}
             </Col>
           </Row>
         )}

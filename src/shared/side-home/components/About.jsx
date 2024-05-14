@@ -1,5 +1,5 @@
-import React, { useRef } from 'react';
-import { Card, Row, Col, Image, Button, Container } from 'react-bootstrap';
+import { useRef } from 'react';
+import { Card, Row, Col, Image, Button } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
 const About = () => {
@@ -28,7 +28,7 @@ const About = () => {
             </p>
           </Col>
         </Row>
-        <Row className="justify-content-between m-2">
+        <Row className="justify-content-between mx-4">
           <Col sm={12} md={12} lg={7} className="order-lg-last d-flex justify-content-center align-items-center">
             <div className="img-video">
               <iframe
@@ -42,28 +42,28 @@ const About = () => {
           </Col>
           <Col sm={12} md={12} lg={5} className="mt-4 d-flex align-items-center">
             <div>
-              <Card.Text style={{ fontWeight: 'bold', fontSize: '32px', lineHeight: '1' }} className="mb-4">
+              <Card.Text className="mb-4 about-title">
                 {t(`about.title`)}
               </Card.Text>
-              <Card.Text dangerouslySetInnerHTML={aboutTextHtml} style={{ lineHeight: '1.2', marginBottom: '10px', fontSize: '24px', }} />
+              <Card.Text dangerouslySetInnerHTML={aboutTextHtml} style={{ lineHeight: '1.2', marginBottom: '10px', fontSize: '22px', }} />
             </div>
           </Col>
         </Row>
-        <Row className="m-2">
+        <Row className="mx-4 mb-4">
           <Col md={6}>
             {keys.map((key, index) => (
               <Card className="monthly-benefit-card mt-4" key={key}>
                 <Card.Body className='p-2'>
                   <Row className="d-flex justify-content-between p-0 m-0">
                     <Col className="d-flex align-items-center justify-content-start m-0 p-0">
-                      <Card.Text style={{ fontSize: '24px' }} className="card-text ps-2 pe-2">
+                      <Card.Text style={{ fontSize: '22px' }} className="card-text ps-2 pe-2">
                         {numbers[index]}
                       </Card.Text>
                       <Col className="d-lg-block d-none ps-2">
                           <Image src={t(`about.pic${key}`)} className="about-image" />
                       </Col>
                       <Col style={{ paddingLeft: '24px' }}>
-                        <Card.Title style={{ fontWeight: 'bold'}} className="card-text">
+                        <Card.Title style={{ fontWeight: '600'}} className="card-text">
                             {t(`about.short${key}`)}
                           </Card.Title>
                         <Card.Text className="text-content">{t(`about.timestamp${key}`)}</Card.Text>
@@ -85,14 +85,14 @@ const About = () => {
                 <Card.Body className='p-2'>
                   <Row className="d-flex p-0 m-0">
                     <Col className="d-flex align-items-center justify-content-start m-0 p-0">
-                      <Card.Text style={{ fontSize: '24px' }}  className="card-text ps-2 pe-2">
+                      <Card.Text style={{ fontSize: '22px' }}  className="card-text ps-2 pe-2">
                         {numbers[index + 2]}
                       </Card.Text>
                       <Col className="d-lg-block d-none ps-2">
                           <Image src={t(`about.pic${key + 2}`)} className="about-image" />
                       </Col>
                       <Col style={{ paddingLeft: '24px' }} >
-                        <Card.Title style={{ fontWeight: 'bold' }} className="card-text">
+                        <Card.Title style={{ fontWeight: '600', fontSize: '21px' }} className="card-text">
                             {t(`about.short${key + 2}`)}
                         </Card.Title>
                         <Card.Text className="text-content">{t(`about.timestamp${key + 2}`)}</Card.Text>

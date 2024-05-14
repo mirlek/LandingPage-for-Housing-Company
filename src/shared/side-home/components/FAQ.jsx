@@ -48,12 +48,18 @@ const FAQ = () => {
                     {faqData[key].title}
                   </Card.Text>   
                 </Button>             
-                <div className={`text-container ${expandedIndex === index ? 'open' : ''} mt-3`}>
+                <div className={`text-container ${expandedIndex === index ? 'open' : ''} mt-3 ms-2`}>
                   <div dangerouslySetInnerHTML={{ __html: faqData[key].text }} />
                   {index === 0 && (
-                    <Button variant="link" href={faqData.youtubeLinkFAQ} target="_blank" className="ourbenefits-download-btns">
-                      <img src={t('faq.picvideo')} className="d-none d-md-inline me-2" />
+                    <Button variant="link" href={t(`faq.youtubeLinkFAQ`)} target="_blank" className="ourbenefits-download-btns">
+                      <img src={t('faq.picvideo')} className="d-none d-md-inline me-2" style={{width: '28px'}}/>
                       {t('ourbenefits.video')}
+                    </Button>
+                  )}
+                  {index === 1 && (
+                    <Button variant="link" href={t(`faq.form`)} download target="_blank" className="ourbenefits-download-btns">
+                      <img src={t('faq.picdocument')} className="d-none d-md-inline me-2" style={{width: '28px'}}/>
+                      {t('faq.formtitle')}
                     </Button>
                   )}
                 </div>

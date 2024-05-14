@@ -18,8 +18,20 @@ body {
   padding-left: 0;
 }
 @media (max-width: 576px) {
+  .header{
+    background-color: transparent !important; 
+  }
+  .logo{
+    width: 108px !important;
+  }
   .heading {
     font-size: 24px !important;
+  }
+  .language-buttons{
+    font-size: 17px !important;
+  }
+  .about-title{
+    font-size: 20px !important;
   }
   .our-benefits-heading{
     font-size: 18px !important;
@@ -56,8 +68,18 @@ body {
     width: 80px !important;
     height: 80px !important;
   }
+  .montly-ben-icons{
+    width: 24px !important;
+    height: 24px !important;
+  }
+  .request-form-icon-wrapper {
+    width: 8% !important;
+  }
 }
 @media (max-width: 767.98px) {
+  .header{
+    background-color: transparent !important; 
+  }
   .ourbenefits-download-btns {
     font-size: 17px !important;
     background-color: #00AB55;
@@ -66,14 +88,14 @@ body {
     color: #FFFFFF !important;
     text-decoration: none !important;
     margin-top: 1rem;
-    padding: 0.8rem 2rem 0.8rem 2rem;
+    padding: 0.8rem 0rem 0.8rem 2rem;
     width: 100% !important;
   }
   .our-benefits-btn-block{
     display: block !important;
   }
   .main-banner-card {
-    margin: 4rem 1rem 1rem 1rem !important; 
+    margin: 10rem 1rem 1rem 1rem !important; 
   }
   .fill{
     height: auto !important;
@@ -92,9 +114,16 @@ body {
     width: 24px !important;
     height: 24px !important;
   }
+  .montly-ben-icons{
+    width: 24px !important;
+    height: 24px !important;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
+  .header{
+    background-color: transparent !important; 
+  }
   .ourbenefits-download-btns {
     font-size: 17px !important;
     background-color: #00AB55;
@@ -103,7 +132,6 @@ body {
     color: #FFFFFF !important;
     text-decoration: none !important;
     margin-top: 1rem;
-    padding: 0.8rem 3rem 0.8rem 1rem;
     width: 100% !important;
     display: block !important;
   }
@@ -113,7 +141,7 @@ body {
   .img-md {
     max-width: fit-content;  }
   .main-banner-card {
-    margin: 4rem 1rem 1rem 1rem !important; 
+    margin: 10rem 1rem 1rem 1rem !important; 
   }
   .custom-text {
     font-size: 14px; 
@@ -122,6 +150,9 @@ body {
   }
   .card-text{
     font-size: 18px !important;
+  }
+  .about-title{
+    font-size: 20px !important;
   }
   .fill{
     height: auto !important;
@@ -133,6 +164,10 @@ body {
     width: 80px !important;
     height: 80px !important;
   }
+  .montly-ben-icons{
+    width: 24px !important;
+    height: 24px !important;
+  }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .custom-text {
@@ -143,12 +178,24 @@ body {
   .card-text{
     font-size: 18px !important;
   }
+  .about-title{
+    font-size: 24px !important;
+  }
   .fill{
     height: auto !important;
   }
   .main-banner-btn-contactUs{
     margin-top: 1rem;
   }
+}
+@media (max-width: 1439.98px) {
+  .d-lg-flex {
+    display: none !important;
+  }
+}
+.logo{
+  width: 50%;
+  max-width: 133px;
 }
 button {
   background-color: transparent;
@@ -159,13 +206,15 @@ button {
 .btn-custom {
   background-color: #F6F6F6; 
   color: #00AB55; 
-  font-size: 22px;
+  font-size: 17px;
+  font-weight: 500;
   border: 1px solid transparent; 
-  border-radius: 24px;
+  border-radius: 25px;
   padding-left: 32px;
   padding-right: 32px;
   margin-left: 24px;
   padding-bottom: 8px;
+  padding-top: 8px;
   transition: background-color 0.3s ease;
 }
 .btn:focus{
@@ -184,9 +233,10 @@ button {
 #bannerBtns{
   background-color: #F6F6F6; 
   color: #000000; 
+  font-size: 24px;
   font-weight: 500;
   border: 1px solid transparent; 
-  border-radius: 24px;
+  border-radius: 26px;
   padding-left: 2rem;
   padding-right: 2rem;
   margin-left: 1rem
@@ -198,9 +248,10 @@ button {
 #contactUs {
   background-color: #00AB55; 
   color: #FFFFFF;
-  font-weight: 500; 
+  font-size: 22px;
+  font-weight: 600; 
   border: 1px solid transparent; 
-  border-radius: 24px;
+  border-radius: 32px;
   padding-bottom: 8px;
   margin-left: 0;
   margin-top: 2rem;
@@ -236,6 +287,9 @@ button {
 .phone:hover {
   color: #FFFFFF;
 }
+.phone-number{
+  font-size: 17px;
+}
 .tooltip-inner {
   background-color: #FFFFFF; 
   color: #00AB55; 
@@ -244,6 +298,7 @@ button {
   padding-left: 0.8rem; 
   font-size: 11px;
   text-align: left;
+  margin-left: 8rem;
 }
 .tooltip {
   --bs-tooltip-arrow-width: 0em;
@@ -282,12 +337,12 @@ button {
   color: #ffffff;
   margin: 15rem 1rem 1rem 1rem;
   border: 1px solid transparent;
-  border-radius: 32px;
+  border-radius: 36px;
 }
-
 .heading {
-  font-weight: bold; 
+  font-weight: 700; 
   font-size: 48px; 
+  letter-spacing: 1%;
   padding: 0.3rem;
   line-height: 1; 
   text-transform: uppercase;
@@ -325,9 +380,19 @@ button {
   background-color: #F6F6F6;
   border: 1px solid #F6F6F6;
 }
+.montly-ben-icons{
+  width: 42px;
+  height: 42px;
+}
 .about-btn{
   background-color: #00AB55;
   height: 100%;
+}
+.about-title{
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0%;
 }
 .about-image{
   max-width: fit-content;
@@ -335,8 +400,8 @@ button {
 .img-coins {
   position: relative;
   overflow: hidden;
-  width: 100%;
-  max-width: 80%;
+  width: 148px;
+  height: 148px;
 }
 
 .img-video {
@@ -365,9 +430,10 @@ button {
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
+  width: 4%;
 }
 .request-form-icon-input-wrapper:focus-within .request-form-icon {
-  transition: filter 0.4s ease;
+  transition: filter 0.3s ease;
   filter: brightness(0);
 }
 
@@ -377,7 +443,7 @@ button {
   border-radius: 32px;
   margin-bottom: 1rem;
   padding: 24px;
-  padding-left: 58px;
+  padding-left: 60px;
 }
 .form-control {
   color: black;
@@ -412,6 +478,7 @@ button {
   line-height: 1;
   text-decoration: underline;
   font-size: 22px;
+  padding-left: 0;
 }
 .our-benefits-heading{
   font-weight: bold; 
@@ -444,7 +511,18 @@ button {
   opacity: 0; 
   pointer-events: none;
 }
-
 .hidden.icon {
   transform: rotate(-90deg); 
+}
+.itooltip{
+  width: 6%;
+}
+.info-footer{
+  background-color: #F2F2F2;
+  border: 1px solid transparent;
+  border-radius: 32px;
+  color: #9A9A9A;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1
 }

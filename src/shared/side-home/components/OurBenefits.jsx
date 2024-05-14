@@ -29,7 +29,7 @@ const OurBenefits = () => {
         {keys.map((key, index) => (
           <Col md={6} key={index}>
             <Card className="coins mb-3 p-1 w-100">
-              <Card.Body>
+              <Card.Body className='px-4 pt-3 pb-3'>
                 <Row>
                   <Col xs={3} md={3} lg={3} className='d-flex justify-content-center align-items-center'>
                     <Card.Img variant="top" src={t(`ourbenefits.pic${key}`)} className='our-benefits-img'/>
@@ -41,7 +41,7 @@ const OurBenefits = () => {
                           {t(`ourbenefits.title${key}`)}
                         </p>
                       </Card.Title>
-                      <Card.Text style={{ lineHeight: '1' }}>{t(`ourbenefits.text${key}`)}</Card.Text>
+                      <Card.Text style={{ lineHeight: '140%', fontSize: '21px', letterSpacing: '1%' }}>{t(`ourbenefits.text${key}`)}</Card.Text>
                     </div>
                   </Col>
                   <Col xs={12} md={12} lg={12} className={`d-flex align-items-center our-benefits-btn-block mt-2 ${
@@ -57,7 +57,7 @@ const OurBenefits = () => {
                             download
                             className="ourbenefits-download-btns"
                           >
-                            <img src={t('faq.picdocument')} alt="Document Icon" className="d-none d-md-inline me-1" />
+                            <img src={t('faq.picdocument')} alt="Document Icon" className="d-none d-md-inline ms-1" style={{width: '28px'}}/>
                             {t('ourbenefits.option2')}
                           </Button>
                           <Button
@@ -66,7 +66,7 @@ const OurBenefits = () => {
                             download
                             className="ourbenefits-download-btns"
                           >
-                            <img src={t('faq.picdocument')} alt="Document Icon" className="d-none d-md-inline me-1" />
+                            <img src={t('faq.picdocument')} alt="Document Icon" className="d-none d-md-inline ms-1" style={{width: '28px'}}/>
                             {t('ourbenefits.option3')}
                           </Button>
                         </div>
@@ -82,7 +82,7 @@ const OurBenefits = () => {
                           <img
                             src={index === 2 ? t('faq.picvideo') : t('faq.picdocument')}
                             alt={index === 2 ? 'Video Icon' : 'Document Icon'}
-                            className="d-none d-md-inline me-1"
+                            className="d-none d-md-inline ms-1" style={{width: '28px'}}
                           />
                           {index === 2 ? t(`ourbenefits.video`) : t(`ourbenefits.option${key}`)}
                         </Button>
