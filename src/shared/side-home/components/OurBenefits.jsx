@@ -44,7 +44,7 @@ const OurBenefits = () => {
                       <Card.Text style={{ lineHeight: '140%', fontSize: '21px', letterSpacing: '1%' }}>{t(`ourbenefits.text${key}`)}</Card.Text>
                     </div>
                   </Col>
-                  <Col xs={12} md={12} lg={12} className={`d-flex align-items-center our-benefits-btn-block mt-2 ${
+                  <Col xs={12} md={12} lg={12} className={`d-flex align-items-center our-benefits-btn-block mt-2 p-0 ${
                       window.innerWidth < 767 ? 'justify-content-start' : 'justify-content-start'
                     }`}
                   >

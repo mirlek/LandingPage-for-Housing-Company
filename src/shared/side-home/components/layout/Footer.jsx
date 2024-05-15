@@ -12,8 +12,8 @@ const Footer = () => {
           <Col xs={12} md={4} lg={2} className="mb-3 text-center text-md-start">
             <Card.Text className="d-flex justify-content-center justify-content-md-start align-items-center" 
               style={{ color: '#9A9A9A', fontSize: '18px' }}>
-              <Image src={t('contacts.phone_label')} alt="Phone" className="me-2 d-flex align-items-center" 
-                style={{maxWidth: '10%', height: 'fit-content'}}/>
+              <Image src={t('contacts.phone_label')} alt="Phone" className="me-2 d-flex align-items-center footer-img" 
+                style={{width: '24px', height: '24px'}}/>
               <span>{t('contacts.phone')}</span>
             </Card.Text>
             <Card.Text style={{ fontWeight: '700', fontSize: '21px' }}>+7 (707) 682-56-76</Card.Text>

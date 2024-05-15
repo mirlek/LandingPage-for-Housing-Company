@@ -46,7 +46,7 @@ const FAQ = () => {
                 <Container>
                   <Row>
                   <Col lg={10}  sm={10}>
-                    <Card.Text style={{ fontWeight: 'bold', fontSize: '32px', textAlign: 'start' }} className="text-content p-0 m-0 mt-2 ps-4 faq-text-content">
+                    <Card.Text style={{ fontWeight: 'bold', fontSize: '32px', textAlign: 'start' }} className="text-content p-0 m-0 mt-2 ps-3 faq-text-content">
                       {faqData[key].title}
                     </Card.Text> 
                   </Col>
@@ -60,23 +60,22 @@ const FAQ = () => {
                 </Container>
                 </Button> 
                 <Col>
-                    <div className={`text-container ${expandedIndex === index ? 'open' : ''} ms-2`}>
-                    <div dangerouslySetInnerHTML={{ __html: faqData[key].text }} className='px-4'/>
+                  <div className={`text-container ${expandedIndex === index ? 'open' : ''} `}>
+                    <div dangerouslySetInnerHTML={{ __html: faqData[key].text }} className='px-4 faq-text mx-2'/>
                     {index === 0 && (
-                      <Button variant="link" href={t(`faq.youtubeLinkFAQ`)} target="_blank" className="ourbenefits-download-btns">
+                      <Button variant="link" href={t(`faq.youtubeLinkFAQ`)} target="_blank" className="ourbenefits-download-btns faq-download-btns">
                         <img src={t('faq.picvideo')} className="d-none d-md-inline me-2" style={{width: '28px'}}/>
                         {t('ourbenefits.video')}
                       </Button>
                     )}
                     {index === 1 && (
-                      <Button variant="link" href={t(`faq.form`)} download target="_blank" className="ourbenefits-download-btns">
+                      <Button variant="link" href={t(`faq.form`)} download target="_blank" className="ourbenefits-download-btns faq-download-btns">
                         <img src={t('faq.picdocument')} className="d-none d-md-inline me-2" style={{width: '28px'}}/>
                         {t('faq.formtitle')}
                       </Button>
                     )}
                   </div>
-                  </Col>
-                
+                </Col>
             </Row>
           </Card.Body>
         </Card>

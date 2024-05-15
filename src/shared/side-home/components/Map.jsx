@@ -51,15 +51,8 @@ const Map = () => {
           </Row>
         ) : (
           <Row className="mb-3">
-            <Col className="d-flex justify-content-center mb-3">
-            <iframe src="https://www.google.com/maps/d/embed?mid=1xob9Q9un2UzpzCHpNabj2HiwAmOKfw8&ehbc=2E312F" width={'100%'} allowFullScreen height="700"></iframe>
-              {/* <iframe 
-                src="https://www.google.com/maps/d/embed?mid=1xob9Q9un2UzpzCHpNabj2HiwAmOKfw8&ehbc=2E312F" 
-                width={'100%'} 
-                height="480" 
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"></iframe> */}
+            <Col className="d-flex justify-content-center mb-3 ">
+            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1xob9Q9un2UzpzCHpNabj2HiwAmOKfw8&ehbc=2E312F&noprof=1" width="100%" allowFullScreen height="700"></iframe>           
             </Col>
           </Row>
         )}
