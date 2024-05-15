@@ -386,11 +386,12 @@ button {
 }
 .mobile-background {
   width: 100%;
-  height: -webkit-fill-available;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
+  object-fit: cover;
 }
 .main-banner-card {
   background-color: rgba(255, 255, 255, 0.2); 
