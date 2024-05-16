@@ -52,7 +52,13 @@ const Map = () => {
         ) : (
           <Row className="mb-3">
             <Col className="d-flex justify-content-center mb-3 ">
-            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1xob9Q9un2UzpzCHpNabj2HiwAmOKfw8&ehbc=2E312F&noprof=1" width="100%" allowFullScreen height="700"></iframe>           
+              <iframe 
+                src="https://yandex.ru/map-widget/v1/?um=constructor%3A76b314abf0117a920522413340f3f9ba3513b7c83d05daab433b02ca9b95b5d9&amp;source=constructor" 
+                width="100%" 
+                height="720" 
+                allowFullScreen 
+                frameborder="0">
+              </iframe>
             </Col>
           </Row>
         )}

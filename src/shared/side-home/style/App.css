@@ -152,6 +152,9 @@ body {
     height: 16px !important;
     width: 16px !important;
   }
+  .footer-first-column{
+    padding-bottom: 1rem !important;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -236,6 +239,14 @@ body {
   .faq-text{
     font-size: 18px !important;
   }
+  #contactUs {
+    width: 90% !important;
+  }
+  .contactUsCoins{
+    width: 100% !important;
+    height: auto !important;
+    padding-top: 10px !important;
+  }
 }
 @media (max-width: 1439.98px) {
   .d-lg-flex {
@@ -313,10 +324,12 @@ button {
   margin-top: 2rem;
   height: 64px;
   width: 100%;
-  max-width: 264px;
 }
 #contactUs:hover {
   background-color: #00C863 !important; 
+}
+.contactUsMainBanner{
+  width: 50% !important;
 }
 #send-request {
   background-color: #9A9A9A; 
@@ -376,7 +389,8 @@ button {
 }
 .video-banner {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -535,12 +549,13 @@ button {
 .ourbenefits-download-btns{
   color: #00AB55;
   line-height: 1;
-  text-decoration: underline;
+  text-decoration: none;
   font-size: 22px;
   padding-left: 0;
 }
 .btn-link:hover {
   color: #00AB55 !important;
+  text-decoration: underline;
 }
 .our-benefits-heading{
   font-weight: bold; 
@@ -580,6 +595,10 @@ button {
 }
 .itooltip{
   width: 6%;
+}
+.itooltip-phone{
+  width: 28px;
+  height: 28px;
 }
 .info-footer{
   background-color: #F2F2F2;

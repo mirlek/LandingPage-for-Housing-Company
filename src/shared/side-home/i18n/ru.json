@@ -3,6 +3,7 @@
   "phone": "Номер телефона",
   "bannerBackground": "/img/Banner_ver2.mp4",
   "bannerBackgroundMobile": "/img/Background_mobile.png",
+  "tooltip": "Данная линия только для председателей. Жильцы обращаются напрямую к своему председателю.",
   "btn": {
     "login": "Войти",
     "contactUs": "Связаться с нами",
@@ -10,7 +11,7 @@
   },
   "mainBanner": {
     "heading": "IT-система для представителей форм управления МЖД",
-    "btntitle": "Выберите форму",
+    "btntitle": "Выберите<br /> форму",
     "btn1": "ОСИ",
     "btn2": "УК",
     "btn3": "КСК",
