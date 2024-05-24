@@ -26,22 +26,22 @@ const MainBannerCard = () => {
     <Card className="main-banner-card p-4">
       <Card.Body className="p-0">
         <Container>
-          <Row xs={1} md={2}>
-            <Col lg={5}>
+          <Row xs={1} md={1}>
+            <Col lg={6} className='px-0 mt-auto mb-auto'>
               <Col className="mb-3 p-0">
-                <p className="heading" style={{ textTransform: 'none' }}>
+                <p className="heading" style={{ textTransform: 'none', lineHeight: '1.2' }}>
                   {t('mainBanner.heading')}
                 </p>
               </Col>
               <Col className="main-banner-btn-contactUs d-none d-lg-block">
-                <Button variant="custom" id="contactUs" href="#requestForm" className="w-lg-50 w-md-100 w-xs-100 m-0">
+                <Button variant="custom" id="contactUs" href="#requestForm" className="w-lg-50 w-md-100 w-xs-100 m-0 contactUsMainBanner">
                   {t('btn.contactUs')}
                 </Button>
               </Col>
             </Col>
-            <Col lg={7} className="fill" style={{ height: '310px', maxHeight: '310px' }}>
+            <Col lg={6} className="fill px-0" style={{ height: '370px', maxHeight: '370px' }}>
             <div className="d-lg-flex flex-wrap d-none align-items-center mb-4">
-              <p style={{ fontSize: '18px', fontWeight: '700' }}>{t('mainBanner.btntitle')}</p>
+              <p style={{ fontSize: '18px', fontWeight: '700', lineHeight: '1.3' }} dangerouslySetInnerHTML={{ __html: t('mainBanner.btntitle') }}></p>
                 {['btn1', 'btn2', 'btn3', 'btn4'].map((key, index) => (
                   <Button
                     type={'button'}
@@ -73,7 +73,7 @@ const MainBannerCard = () => {
               {!activeButton && (
                 <Card.Text dangerouslySetInnerHTML={{ __html: t('mainBanner.btntext') }}  
                   className={`d-md-inline d-lg-inline d-xl-inline d-xxl-inline custom-text ${!activeButton && !animationStarted ? 'slide-in' : ''}`}
-                  style={{ lineHeight: '1.2' }}/>
+                  style={{ lineHeight: '140%' }}/>
               )}
             </Col>
             <Col className="main-banner-btn-contactUs d-lg-none"> 

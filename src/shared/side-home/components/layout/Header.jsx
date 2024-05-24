@@ -18,12 +18,12 @@ const Header = () => {
           <div className="d-flex align-items-center justify-content-end">
             <OverlayTrigger
               placement="bottom"
-              overlay={<Tooltip id="tooltip-inner">Номер телефона предназначен только для связи с председателем</Tooltip>}
+              overlay={<Tooltip id="tooltip-inner">{t('tooltip')}</Tooltip>}
               arrow={false} 
             >
               <div className="phone me-4">
               <a href="tel:+77076825676" className="d-flex align-items-center justify-content-end p-0">
-                <Image src="/img/call-new.png" className="me-2 itooltip"/>
+                <Image src="/img/call-new.png" className="me-2 itooltip itooltip-phone"/>
                   <p className='phone-number' style={{fontWeight: '600'}}>+7 (707) 682-56-76</p>
                 <Image src="/img/itooltip.png" className="ms-2 itooltip" />
               </a>
@@ -31,7 +31,7 @@ const Header = () => {
             </OverlayTrigger>
             <LanguageSelector className="mr-3" />
             <NavLink className={'button contained'} to={PATH_AUTH.login}>
-              <Button variant="custom">
+              <Button variant="custom" id='login-btn'>
                 <span>
                   <TranslatedToken id={tokens.common.login} />
                 </span>
@@ -43,7 +43,7 @@ const Header = () => {
         <Col xs={12} className="d-block d-lg-none p-0">
           <div className="d-flex justify-content-between align-items-center">
             <div>
-              <Image src="/img/logo.png"  className='logo'/>
+              <Image src="/img/logo.png" className='logo'/>
             </div>
             <div>
               <Button variant="custom" id="loginBtn">
@@ -55,8 +55,7 @@ const Header = () => {
             <LanguageSelector />
             <OverlayTrigger
               placement="bottom"
-              overlay={<Tooltip id="tooltip-phone">Номер телефона предназначен только для связи с председателем</Tooltip>}
-            >
+              overlay={<Tooltip id="tooltip-inner">{t('tooltip')}</Tooltip>}>
               <div className="phone" style={{fontSize: '17px'}}>
                 <a href="tel:+77076825676" className="d-flex align-items-center justify-content-end">
                   <Image src="/img/call-new.png" className="me-2 itooltip" />

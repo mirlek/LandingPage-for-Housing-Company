@@ -101,11 +101,20 @@ const RequestForm = () => {
                 >
                   {t('btn.sendrequest')}
                 </Button>
-                <Card.Text
-                  className="d-flex justify-content-center text-center mb-4 mt-2"
-                  style={{ color: '#9A9A9A', fontSize: '17px', fontWeight: '500' }}
-                  dangerouslySetInnerHTML={{ __html: t('request.info') }}>
-                </Card.Text>
+                <div className='d-flex justify-content-center align-items-center mx-auto mb-4 mt-2'>
+                  <Card.Text className="d-inline"
+                    style={{ color: '#9A9A9A', fontSize: '17px', fontWeight: '500' }}>
+                    {t('request.info.beforeLink')}
+                    <span>
+                      <a
+                        href={t('nda.file')}
+                        download
+                        style={{ color: 'inherit', textDecoration: 'underline' }}>
+                          {t('request.info.linkText')}
+                      </a>
+                    </span>
+                  </Card.Text>
+                </div>
               </Form>
             </div>
           </Col>
