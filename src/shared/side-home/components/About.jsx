@@ -59,7 +59,7 @@ const About = () => {
                       <Card.Text style={{ fontSize: '22px' }} className="card-text ps-2 pe-2">
                         {numbers[index]}
                       </Card.Text>
-                      <Col className="d-lg-block d-none ps-2">
+                      <Col className="d-xl-block d-none ps-2">
                           <Image src={t(`about.pic${key}`)} className="about-image" />
                       </Col>
                       <Col style={{ paddingLeft: '24px' }}>
@@ -88,7 +88,7 @@ const About = () => {
                       <Card.Text style={{ fontSize: '22px' }}  className="card-text ps-2 pe-2">
                         {numbers[index + 2]}
                       </Card.Text>
-                      <Col className="d-lg-block d-none ps-2">
+                      <Col className="d-xl-block d-none ps-2">
                           <Image src={t(`about.pic${key + 2}`)} className="about-image" />
                       </Col>
                       <Col style={{ paddingLeft: '24px' }} >

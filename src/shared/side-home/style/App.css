@@ -44,7 +44,7 @@ body {
     font-size: 13px !important;
   }
   .card-text{
-    font-size: 13px !important;
+    font-size: 20px !important;
   }
   .btn-custom {
     font-size: 17px !important;
@@ -90,6 +90,9 @@ body {
   }
   .faq-text-content{
     width: 250px !important;
+  }
+  .map-iframe iframe {
+    height: 360px !important;
   }
 }
 @media (max-width: 767.98px) {
@@ -154,6 +157,9 @@ body {
   }
   .footer-first-column{
     padding-bottom: 1rem !important;
+  }
+  .map-iframe iframe {
+    height: 360px !important;
   }
 }
 
@@ -463,6 +469,8 @@ button {
 .about-btn{
   background-color: #00AB55;
   height: 100%;
+  min-height: 100px;
+  min-width: 50px;
 }
 .about-title{
   font-size: 32px;
@@ -574,6 +582,11 @@ button {
   cursor: default;
   opacity: 1 !important; 
 }
+
+.map-iframe iframe {
+  height: 720px;
+}
+
 .main-banner-btn-contactUs{
   margin-top: 3em;
 }

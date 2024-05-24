@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Card, Row, Col, Image, Form, Button } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
+import MaskedFormControl from 'react-bootstrap-maskedinput'
 
 const RequestForm = () => {
   const { t } = useTranslation();
@@ -36,7 +37,7 @@ const RequestForm = () => {
   useEffect(() => {checkFormValidity()}, [name, phone]);
   
   const checkFormValidity = () => {
-    const phoneRegex = /^(?:\+7|7)[0-9]{10}$/;
+    const phoneRegex = /^(?:\+7|7) \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}$/;
     if (name && name.trim() !== '' && phone && phone.trim().match(phoneRegex)) {
       setFormValid(true);
     } else {
@@ -81,13 +82,14 @@ const RequestForm = () => {
                     <div className="request-form-icon-wrapper">
                       <Image src="\img\call_11.png" alt="User Icon" className="request-form-icon" />
                     </div>
-                    <Form.Control
-                      type="tel"
+                    <MaskedFormControl
+                      type="text"
                       placeholder="Номер телефона"
                       value={phone}
                       onFocus={handlePhoneFocus}
                       onChange={handlePhoneChange}
                       className="form-submit"
+                      mask='+7 (111) 111-11-11'
                     />
                   </div>
                 </Form.Group>
