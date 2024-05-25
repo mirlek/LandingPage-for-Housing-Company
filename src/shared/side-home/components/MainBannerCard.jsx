@@ -23,7 +23,7 @@ const MainBannerCard = () => {
   };
 
   return (
-    <Card className="main-banner-card p-4">
+    <Card className="main-banner-card">
       <Card.Body className="p-0">
         <Container>
           <Row xs={1} md={1}>
@@ -40,8 +40,8 @@ const MainBannerCard = () => {
               </Col>
             </Col>
             <Col lg={6} className="fill px-0" style={{ height: '370px', maxHeight: '370px' }}>
-            <div className="d-lg-flex flex-wrap d-none align-items-center mb-4">
-              <p style={{ fontSize: '18px', fontWeight: '700', lineHeight: '1.3' }} dangerouslySetInnerHTML={{ __html: t('mainBanner.btntitle') }}></p>
+            <div className="d-flex flex-wrap align-items-center mb-4">
+              <p style={{ fontSize: '18px', fontWeight: '700', lineHeight: '1.3' }} className='main-banner-btns-title' dangerouslySetInnerHTML={{ __html: t('mainBanner.btntitle') }}></p>
                 {['btn1', 'btn2', 'btn3', 'btn4'].map((key, index) => (
                   <Button
                     type={'button'}

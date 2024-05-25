@@ -42,9 +42,9 @@ const About = () => {
           </Col>
           <Col sm={12} md={12} lg={5} className="mt-4 d-flex align-items-center">
             <div>
-              <Card.Text className="mb-4 about-title">
+              <p className="mb-4 about-title">
                 {t(`about.title`)}
-              </Card.Text>
+              </p>
               <Card.Text dangerouslySetInnerHTML={aboutTextHtml} style={{ lineHeight: '1.2', marginBottom: '10px', fontSize: '22px', }} />
             </div>
           </Col>
@@ -56,14 +56,14 @@ const About = () => {
                 <Card.Body className='p-2'>
                   <Row className="d-flex justify-content-between p-0 m-0">
                     <Col className="d-flex align-items-center justify-content-start m-0 p-0">
-                      <Card.Text style={{ fontSize: '22px' }} className="card-text ps-2 pe-2">
+                      <Card.Text className="about-numbers ps-2 pe-2">
                         {numbers[index]}
                       </Card.Text>
-                      <Col className="d-lg-block d-none ps-2">
+                      <Col className="d-xl-block d-none ps-2">
                           <Image src={t(`about.pic${key}`)} className="about-image" />
                       </Col>
                       <Col style={{ paddingLeft: '24px' }}>
-                        <Card.Title style={{ fontWeight: '600'}} className="card-text">
+                        <Card.Title className="about-shorts">
                             {t(`about.short${key}`)}
                           </Card.Title>
                         <Card.Text className="text-content">{t(`about.timestamp${key}`)}</Card.Text>
@@ -85,14 +85,14 @@ const About = () => {
                 <Card.Body className='p-2'>
                   <Row className="d-flex p-0 m-0">
                     <Col className="d-flex align-items-center justify-content-start m-0 p-0">
-                      <Card.Text style={{ fontSize: '22px' }}  className="card-text ps-2 pe-2">
+                      <Card.Text className="about-numbers ps-2 pe-2">
                         {numbers[index + 2]}
                       </Card.Text>
-                      <Col className="d-lg-block d-none ps-2">
+                      <Col className="d-xl-block d-none ps-2">
                           <Image src={t(`about.pic${key + 2}`)} className="about-image" />
                       </Col>
                       <Col style={{ paddingLeft: '24px' }} >
-                        <Card.Title style={{ fontWeight: '600', fontSize: '21px' }} className="card-text">
+                        <Card.Title className="about-shorts">
                             {t(`about.short${key + 2}`)}
                         </Card.Title>
                         <Card.Text className="text-content">{t(`about.timestamp${key + 2}`)}</Card.Text>

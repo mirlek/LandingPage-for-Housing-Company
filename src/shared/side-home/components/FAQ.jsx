@@ -9,14 +9,17 @@ const FAQ = () => {
   const keys = Array.from({ length: 3 }, (_, index) => index + 1);
   const faqData = {
     1: {
+      num: t('faq.num1'),
       title: t('faq.title1'),
       text: t('faq.text1')
     },
     2: {
+      num: t('faq.num2'),
       title: t('faq.title2'),
       text: t('faq.text2')
     },
     3: {
+      num: t('faq.num3'),
       title: t('faq.title3'),
       text: t('faq.text3')
     }
@@ -45,10 +48,13 @@ const FAQ = () => {
               <Button onClick={() => toggleExpand(index)} type="button" variant={null} className='btn d-flex align-items-center'>
                 <Container>
                   <Row>
-                  <Col lg={10}  sm={10}>
-                    <Card.Text style={{ fontWeight: 'bold', fontSize: '32px', textAlign: 'start' }} className="text-content p-0 m-0 mt-2 ps-3 faq-text-content">
+                  <Col lg={10}  sm={10} className='d-flex align-items-center mt-2 mb-2'>
+                    <p className="faq-numbers me-2 ms-2">
+                      {faqData[key].num}
+                    </p>
+                    <p className="faq-titles p-0 m-0 ps-3 faq-text-content">
                       {faqData[key].title}
-                    </Card.Text> 
+                    </p> 
                   </Col>
                   <Col lg={2} sm={2}>
                     <div className="icon-container d-flex justify-content-end align-items-center">

@@ -34,8 +34,26 @@ body {
   .language-buttons{
     font-size: 17px !important;
   }
+  .main-banner-btns-title{
+    margin-right: 2px !important;
+  }
+  #bannerBtns{
+    font-size: 12px !important;
+    height: 38px !important;
+    width: 59px !important;
+  }
   .about-title{
     font-size: 20px !important;
+  }
+  .about-numbers{
+    font-size: 16px !important;
+  }
+  .about-shorts{
+    font-size: 16px !important;
+  }
+  .about-btn{
+    min-height: 44px !important;
+    min-width: 30px !important;
   }
   .our-benefits-heading{
     font-size: 18px !important;
@@ -79,6 +97,10 @@ body {
     width: 24px !important;
     height: 24px !important;
   }
+  .monthly-ben-titles{
+    font-size: 18px !important;
+    width: 100% !important;
+  }
   .request-form-icon-wrapper {
     width: 8% !important;
   }
@@ -91,10 +113,29 @@ body {
   .faq-text-content{
     width: 250px !important;
   }
+  .map-iframe iframe {
+    height: 360px !important;
+  }
 }
 @media (max-width: 767.98px) {
   .header{
     background-color: transparent !important; 
+  }
+  .main-banner-btns-title{
+    font-size: 11px !important; 
+    line-height: 15.4px !important;
+    margin-right: 5px !important;
+  }
+  #bannerBtns{
+    font-size: 12px !important;
+    height: 38px !important;
+    width: 59px !important;
+    margin: 3px !important;
+    padding: 0 !important;
+  }
+  .about-btn{
+    min-height: 62px !important;
+    min-width: 44px !important;
   }
   .ourbenefits-download-btns {
     font-size: 17px !important;
@@ -113,6 +154,7 @@ body {
   }
   .main-banner-card {
     margin: 10rem 1rem 1rem 1rem !important; 
+    padding: 14px !important;
   }
   .fill{
     height: auto !important;
@@ -130,7 +172,7 @@ body {
   .icon {
     width: 24px !important;
     height: 24px !important;
-    margin-bottom: 35px !important;
+    margin-bottom: 75px !important;
   }
   .montly-ben-icons{
     width: 24px !important;
@@ -141,6 +183,12 @@ body {
   }
   #send-request {
     height: 46px !important;
+  }
+  .faq-numbers{
+    font-size: 18px !important;
+  }
+  .faq-titles{
+    font-size: 18px !important;
   }
   .faq-text{
     font-size: 13px !important;
@@ -154,6 +202,9 @@ body {
   }
   .footer-first-column{
     padding-bottom: 1rem !important;
+  }
+  .map-iframe iframe {
+    height: 360px !important;
   }
 }
 
@@ -186,7 +237,16 @@ body {
     margin-bottom: 0; 
   }
   .about-title{
-    font-size: 20px !important;
+    font-size: 24px !important;
+  }
+  .about-numbers{
+    font-size: 18px !important;
+  }
+  .about-shorts{
+    font-size: 18px !important;
+  }
+  .about-btn{
+    min-height: 100px !important;
   }
   .fill{
     height: auto !important;
@@ -216,6 +276,18 @@ body {
   }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
+  .main-banner-btns-title{
+    font-size: 14px !important; 
+    line-height: 15.4px !important;
+    margin-right: 14px;
+  }
+  #bannerBtns{
+    font-size: 16px !important;
+    height: 38px !important;
+    width: 80px !important;
+    margin: 4px !important;
+    padding: 0 !important;
+  }
   .custom-text {
     font-size: 14px; 
     margin-top: 3rem;
@@ -223,6 +295,10 @@ body {
   }
   .card-text{
     font-size: 18px !important;
+  }
+  .monthly-ben-titles{
+    font-size: 18px !important;
+    width: 80% !important;
   }
   .about-title{
     font-size: 24px !important;
@@ -235,6 +311,9 @@ body {
   }
   .icon-container{
     margin-top: 18px !important;
+  }
+  .icon {
+    margin-top: 28px !important;
   }
   .faq-text{
     font-size: 18px !important;
@@ -295,6 +374,11 @@ button {
 #login-btn:hover{
   background-color: #00AB55 !important; 
   color: #ffffff !important; 
+}
+.main-banner-btns-title{
+  font-size: 18px; 
+  font-weight: 700;
+  line-height: 1.3
 }
 #bannerBtns{
   background-color: #F6F6F6; 
@@ -414,6 +498,7 @@ button {
   margin: 15rem 1rem 1rem 1rem;
   border: 1px solid transparent;
   border-radius: 36px;
+  padding: 24px;
 }
 .heading {
   font-weight: 700; 
@@ -434,6 +519,11 @@ button {
   background-color: #F6F6F6;
   border: 1px solid transparent;
   border-radius: 18px;
+}
+.monthly-ben-titles{
+  font-size: 24px;
+  font-weight: 700;
+  width: 65%;
 }
 @keyframes slideIn {
   from {
@@ -460,9 +550,18 @@ button {
   width: 42px;
   height: 42px;
 }
+.about-numbers{
+  font-size: 22px;
+}
+.about-shorts{
+  font-size: 21px;
+  font-weight: 600;
+}
 .about-btn{
   background-color: #00AB55;
   height: 100%;
+  min-height: 80px;
+  min-width: 50px;
 }
 .about-title{
   font-size: 32px;
@@ -558,7 +657,7 @@ button {
   text-decoration: underline;
 }
 .our-benefits-heading{
-  font-weight: bold; 
+  font-weight: 700; 
   font-size: 24px; 
   padding: 0.3rem;
   line-height: 1; 
@@ -573,6 +672,9 @@ button {
   pointer-events: none;
   cursor: default;
   opacity: 1 !important; 
+}
+.map-iframe iframe {
+  height: 720px;
 }
 .main-banner-btn-contactUs{
   margin-top: 3em;
@@ -608,6 +710,17 @@ button {
   font-size: 17px;
   font-weight: 500;
   line-height: 1
+}
+.faq-numbers{
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: 2%;
+  color:  rgba(145, 158, 171, 0.56);
+}
+.faq-titles{
+  font-weight: 700;
+  font-size: 32px;
+  text-align: start
 }
 .faq-download-btns{
   margin-left: 1.2em;
