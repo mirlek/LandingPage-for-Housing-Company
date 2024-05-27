@@ -5,7 +5,7 @@ const Partners = () => {
   const { t } = useTranslation();
 
   return (
-    <Card className="coins mt-4 p-3 w-100">
+    <Card className="main mt-4 p-3 w-100">
       <Card.Body>
         <Col className="d-flex justify-content-center text-center">
           <p style={{ color: '#00AB55' }} className="heading">

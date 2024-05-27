@@ -7,7 +7,7 @@ const MontlyBenefits = () => {
   const keys = Array.from({ length: 8 }, (_, index) => index + 1);
 
   return (
-    <Card className="coins p-3 w-100">
+    <Card className="main p-3 w-100">
       <Card.Body className='pb-2'>
         <Col className="d-flex justify-content-center text-center mb-4">
           <p style={{ color: '#00AB55' }} className="heading">

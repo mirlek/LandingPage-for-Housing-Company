@@ -32,7 +32,7 @@ const FAQ = () => {
 
   return (
     <>
-      <Card className="coins mt-4 mb-3 p-2 w-100">
+      <Card className="main mt-4 mb-3 p-2 w-100">
         <Card.Body>
           <Col className="d-flex justify-content-center text-center">
             <p style={{ color: '#00AB55' }} className="heading">
@@ -42,26 +42,34 @@ const FAQ = () => {
         </Card.Body>
       </Card>
       {keys.map((key, index) => (
-        <Card className="coins mb-3 w-100" key={key}>
+        <Card className="main mb-3 w-100" key={key}>
           <Card.Body className='p-0'>
             <Row className="d-flex align-items-start p-2">
               <Button onClick={() => toggleExpand(index)} type="button" variant={null} className='btn d-flex align-items-center'>
                 <Container>
                   <Row>
-                  <Col lg={10}  sm={10} className='d-flex align-items-center mt-2 mb-2'>
-                    <p className="faq-numbers me-2 ms-2">
-                      {faqData[key].num}
-                    </p>
-                    <p className="faq-titles p-0 m-0 ps-3 faq-text-content">
-                      {faqData[key].title}
-                    </p> 
-                  </Col>
-                  <Col lg={2} sm={2}>
-                    <div className="icon-container d-flex justify-content-end align-items-center">
-                      <Image src="/img/Dropdown_minus_Button.png" alt="Minus" className='icon minus'/>
-                      <Image src="/img/Dropdown_plus_Button.png" alt="Plus" className={`icon ${expandedIndex === index ? 'hidden' : ''}`} />
-                    </div>
-                  </Col>
+                    <Col lg={10}  sm={10} className='d-flex align-items-center mt-2 mb-2'>
+                      <p className="faq-numbers me-2 ms-2">
+                        {faqData[key].num}
+                      </p>
+                      <p className="faq-titles p-0 m-0 ps-3 faq-text-content">
+                        {faqData[key].title}
+                      </p> 
+                    </Col>
+                    <Col lg={2} sm={2}>
+                      <div className="icon-container d-flex justify-content-end align-items-center">
+                      <Image 
+                        src="/img/Dropdown_minus_Button.png" 
+                        alt="Minus" 
+                        className={`icon minus icon-${index}`}
+                      />
+                      <Image 
+                        src="/img/Dropdown_plus_Button.png" 
+                        alt="Plus" 
+                        className={`icon plus icon-${index} ${expandedIndex === index ? 'hidden' : ''}`}
+                      />
+                      </div>
+                    </Col>
                   </Row>
                 </Container>
                 </Button> 

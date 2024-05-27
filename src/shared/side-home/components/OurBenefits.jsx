@@ -16,7 +16,7 @@ const OurBenefits = () => {
 
   return (
     <>
-      <Card className="coins mt-4 mb-3 p-2 w-100">
+      <Card className="main mt-4 mb-3 p-2 w-100">
         <Card.Body>
           <Col className="d-flex justify-content-center text-center">
             <p style={{ color: '#00AB55' }} className="heading">
@@ -28,7 +28,7 @@ const OurBenefits = () => {
       <Row>
         {keys.map((key, index) => (
           <Col md={6} key={index}>
-            <Card className="coins mb-3 p-1 w-100">
+            <Card className="main mb-3 p-1 w-100">
               <Card.Body className='px-4 pt-3 pb-3'>
                 <Row>
                   <Col xs={3} md={3} lg={3} className='d-flex justify-content-center align-items-center'>

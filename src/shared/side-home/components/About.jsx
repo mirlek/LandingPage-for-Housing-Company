@@ -19,7 +19,7 @@ const About = () => {
   const jumpTimes = [1, 45, 87, 131];
 
   return (
-    <Card className="coins w-100 mb-4 mt-4">
+    <Card className="main w-100 mb-4 mt-4">
       <Card.Body className='p-0'>
         <Row>
           <Col className="d-flex justify-content-center mb-4 mt-4">
@@ -28,7 +28,7 @@ const About = () => {
             </p>
           </Col>
         </Row>
-        <Row className="justify-content-between mx-4">
+        <Row className="justify-content-between about-container">
           <Col sm={12} md={12} lg={7} className="order-lg-last d-flex justify-content-center align-items-center">
             <div className="img-video">
               <iframe
@@ -49,10 +49,10 @@ const About = () => {
             </div>
           </Col>
         </Row>
-        <Row className="mx-4 mb-4">
+        <Row className="about-container mb-4">
           <Col md={6}>
             {keys.map((key, index) => (
-              <Card className="monthly-benefit-card mt-4" key={key}>
+              <Card className="monthly-benefit-card about-card-gaps" key={key}>
                 <Card.Body className='p-2'>
                   <Row className="d-flex justify-content-between p-0 m-0">
                     <Col className="d-flex align-items-center justify-content-start m-0 p-0">
@@ -69,7 +69,7 @@ const About = () => {
                         <Card.Text className="text-content">{t(`about.timestamp${key}`)}</Card.Text>
                       </Col>
                     </Col>
-                    <Col className="d-flex justify-content-end">
+                    <Col className="d-flex justify-content-end pe-0">
                       <Button variant="success" className="about-btn" onClick={() => handleTimeJump(jumpTimes[index])}>
                         <Image src="/img/arrow-right.png" alt="btn-about" style={{ padding: 0, margin: 0 }} />
                       </Button>
@@ -81,7 +81,7 @@ const About = () => {
           </Col>
           <Col md={6}>
             {keys.map((key, index) => (
-              <Card className="monthly-benefit-card mt-4" key={key}>
+              <Card className="monthly-benefit-card about-card-gaps" key={key}>
                 <Card.Body className='p-2'>
                   <Row className="d-flex p-0 m-0">
                     <Col className="d-flex align-items-center justify-content-start m-0 p-0">
@@ -98,7 +98,7 @@ const About = () => {
                         <Card.Text className="text-content">{t(`about.timestamp${key + 2}`)}</Card.Text>
                       </Col>
                     </Col>
-                    <Col className="d-flex justify-content-end">
+                    <Col className="d-flex justify-content-end pe-0">
                       <Button variant="success" className="about-btn" onClick={() => handleTimeJump(jumpTimes[index + 2])}>
                         <Image src="/img/arrow-right.png" alt="btn-about" style={{ padding: 0, margin: 0 }} />
                       </Button>

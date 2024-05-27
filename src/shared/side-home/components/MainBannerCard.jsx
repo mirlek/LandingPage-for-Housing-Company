@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Card, Row, Col, Button, Container } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
+import PopUpModal from './Modal'
 
 const MainBannerCard = () => {
   const { t } = useTranslation();
   const [activeButton, setActiveButton] = useState(null);
   const [animationStarted, setAnimationStarted] = useState(false);
   const [pageLoaded, setPageLoaded] = useState(false);
+  const [modalShow, setModalShow] = React.useState(false);
 
   useEffect(() => {
     setPageLoaded(true);
@@ -34,13 +36,16 @@ const MainBannerCard = () => {
                 </p>
               </Col>
               <Col className="main-banner-btn-contactUs d-none d-lg-block">
-                <Button variant="custom" id="contactUs" href="#requestForm" className="w-lg-50 w-md-100 w-xs-100 m-0 contactUsMainBanner">
+                <Button variant="custom" id="contactUs" onClick={() => setModalShow(true)} className="w-lg-50 w-md-100 w-xs-100 m-0 contactUsMainBanner">
                   {t('btn.contactUs')}
                 </Button>
+                <PopUpModal
+                  show={modalShow}
+                  onHide={() => setModalShow(false)}/>
               </Col>
             </Col>
-            <Col lg={6} className="fill px-0" style={{ height: '370px', maxHeight: '370px' }}>
-            <div className="d-flex flex-wrap align-items-center mb-4">
+            <Col lg={6} className="fill px-0" style={{ height: '396px', maxHeight: 'auto' }}>
+            <div className="d-flex flex-wrap align-items-center main-banner-btns-container">
               <p style={{ fontSize: '18px', fontWeight: '700', lineHeight: '1.3' }} className='main-banner-btns-title' dangerouslySetInnerHTML={{ __html: t('mainBanner.btntitle') }}></p>
                 {['btn1', 'btn2', 'btn3', 'btn4'].map((key, index) => (
                   <Button
@@ -62,7 +67,7 @@ const MainBannerCard = () => {
                 ['btn1', 'btn2', 'btn3', 'btn4'].map((key, index) => (
                   <Card.Text
                     key={index}
-                    className={`text ${activeButton === index + 1 && animationStarted ? 'slide-in' : ''} ${
+                    className={`${activeButton === index + 1 && animationStarted ? 'slide-in' : ''} ${
                       activeButton === index + 1 ? 'custom-text' : ''
                     }`}
                     dangerouslySetInnerHTML={{
@@ -72,14 +77,17 @@ const MainBannerCard = () => {
                 ))}
               {!activeButton && (
                 <Card.Text dangerouslySetInnerHTML={{ __html: t('mainBanner.btntext') }}  
-                  className={`d-md-inline d-lg-inline d-xl-inline d-xxl-inline custom-text ${!activeButton && !animationStarted ? 'slide-in' : ''}`}
-                  style={{ lineHeight: '140%' }}/>
+                  className={`d-md-inline d-lg-inline d-xl-inline d-xxl-inline ${!activeButton && !animationStarted ? 'slide-in' : ''}`}
+                />
               )}
             </Col>
             <Col className="main-banner-btn-contactUs d-lg-none"> 
-              <Button variant="custom" id="contactUs" href="#requestForm" className="w-lg-50 w-md-100 w-xs-100 m-0">
+              <Button variant="custom" id="contactUs" onClick={() => setModalShow(true)} className="w-lg-50 w-md-100 w-xs-100 m-0">
                 {t('btn.contactUs')}
               </Button>
+              <PopUpModal
+                show={modalShow}
+                onHide={() => setModalShow(false)}/>
           </Col>
           </Row>
         </Container>

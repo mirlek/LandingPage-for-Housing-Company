@@ -1,8 +1,11 @@
+import React from 'react';
 import { Card, Row, Col, Button, Image } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
+import PopUpModal from './Modal'
 
 const Coins = () => {
   const { t } = useTranslation();
+  const [modalShow, setModalShow] = React.useState(false);
 
   return (
     <Card className="coins mb-4 w-100">
@@ -25,9 +28,13 @@ const Coins = () => {
             </Col>
             <Col xs={12} md={12} lg={4} xl={3}>
             <div className="d-flex justify-content-end justify-content-sm-center">
-              <Button variant="custom" id="contactUs" href="#requestForm" className="mt-0 contactUsCoins">
+              <Button variant="custom" id="contactUs"  className="mt-0 contactUsCoins" onClick={() => setModalShow(true)}>
                 {t('btn.contactUs')}
               </Button>
+              <PopUpModal
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+              />
             </div>
             </Col>
         </Row>

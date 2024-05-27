@@ -22,7 +22,7 @@ const Map = () => {
   }, []);
   
   return (
-    <Card className="coins w-100 mt-4">
+    <Card className="main w-100 mt-4">
       <Card.Body>
         <Row className="justify-content-center text-center align-items-center mb-3">
           <Col>

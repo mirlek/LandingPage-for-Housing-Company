@@ -5,8 +5,8 @@ const Footer = () => {
   const { t } = useTranslation();
 
   return (
-    <Card className="coins mt-4 p-3 w-100">
-      <Card.Body>
+    <Card className="main mt-4 p-4 w-100">
+      <Card.Body className='p-0'>
         <Container>
           <Row className="d-flex justify-content-center align-items-center">
           <Col xs={12} md={4} lg={3} xl={2} className="text-center text-xl-start footer-first-column">
