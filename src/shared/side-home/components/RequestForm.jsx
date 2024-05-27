@@ -70,7 +70,7 @@ const RequestForm = () => {
                     </div>
                     <Form.Control
                       type="text"
-                      placeholder="Имя"
+                      placeholder={t('request.placeholderName')}
                       value={name}
                       onChange={handleNameChange}
                       className="form-submit"
@@ -84,7 +84,7 @@ const RequestForm = () => {
                     </div>
                     <MaskedFormControl
                       type="text"
-                      placeholder="Номер телефона"
+                      placeholder={t('request.placeholderPhone')}
                       value={phone}
                       onFocus={handlePhoneFocus}
                       onChange={handlePhoneChange}
