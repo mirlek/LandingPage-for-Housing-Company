@@ -1,2 +1,1 @@
-т.к. это сторонняя интеграция - необходимо работать внутри папки src/shared/side-home так,
-чтобы в дальнейшем можно было ее перенести в проект не меняя внешний код
+I made a layout for this Project using JavaScript React, Bootstrap and React Bootstrap.
