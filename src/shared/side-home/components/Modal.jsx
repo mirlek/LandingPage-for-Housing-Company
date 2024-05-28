@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import { Card, Row, Col, Image, Form, Button } from 'react-bootstrap';
+import { Card, Row, Col, Image, Form, Button, Modal } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 import MaskedFormControl from 'react-bootstrap-maskedinput'
 
-const RequestForm = () => {
+export default function PopUpModal(props) {
   const { t } = useTranslation();
 
   const [name, setName] = useState('');
@@ -44,24 +44,30 @@ const RequestForm = () => {
       setFormValid(false);
     }
   };
-
   return (
-    <Card className="main mt-4 mb-4 w-100" style={{ backgroundColor: '#F6F6F6' }} id="requestForm">
+    <Modal
+      {...props}
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+      className="modal-custom"
+    >
+      <Modal.Body>
+      <Card className="main m-0 p-0 w-100" style={{ backgroundColor: '#F6F6F6' }} id="requestForm">
       <Card.Body className='p-0'>
-        <Row className="justify-content-between m-0">
-          <Col lg={4} className="d-none d-lg-block p-0 me-4">
+        <Row className="justify-content-center">
+          <Col lg={4} className="d-none d-lg-block p-0">
             <div className="d-flex justify-content-center">
-              <Image src="/img/Frame_35.png" fluid className='request-form-img'/>
+              <Image src="/img/request_form_img.jpg" fluid className='modal-form-img'/>
             </div>
           </Col>
           <Col className="main d-flex justify-content-center align-items-center">
             <div className='request-form-container'>
               <Col className="d-flex justify-content-center text-center">
-                <p style={{ color: '#00AB55' }} className="heading mt-4">
+                <p style={{ color: '#00AB55' }} className="heading">
                   {t('request.heading')}
                 </p>
               </Col>
-              <Card.Text className="d-flex justify-content-center text-center mx-auto request-form-text">{t('request.text')}</Card.Text>
+              <Card.Text className="d-flex justify-content-center text-center mx-auto modal-form-text">{t('request.text')}</Card.Text>
               <Form className="mt-4">
                 <Form.Group controlId="formName">
                   <div className="request-form-icon-input-wrapper">
@@ -103,8 +109,8 @@ const RequestForm = () => {
                 >
                   {t('btn.sendrequest')}
                 </Button>
-                <div className='d-flex justify-content-center align-items-center text-center mx-auto mb-4'>
-                  <Card.Text className="d-inline request-form-info-text">
+                <div className='d-flex justify-content-center align-items-center text-center mx-auto'>
+                  <Card.Text className="d-inline modal-form-info-text">
                     {t('request.info.beforeLink')}
                     <span>
                       <a
@@ -122,7 +128,8 @@ const RequestForm = () => {
         </Row>
       </Card.Body>
     </Card>
+      </Modal.Body>
+    </Modal>
   );
-};
+}
 
-export default RequestForm;

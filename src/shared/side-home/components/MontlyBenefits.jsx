@@ -7,7 +7,7 @@ const MontlyBenefits = () => {
   const keys = Array.from({ length: 8 }, (_, index) => index + 1);
 
   return (
-    <Card className="coins p-3 w-100">
+    <Card className="main p-3 w-100">
       <Card.Body className='pb-2'>
         <Col className="d-flex justify-content-center text-center mb-4">
           <p style={{ color: '#00AB55' }} className="heading">
@@ -17,17 +17,21 @@ const MontlyBenefits = () => {
         <Row>
           {keys.slice(0, 3).map((key) => (
             <Col sm={12} md={12} lg={4} key={key}>
-              <Card className="monthly-benefit-card mt-2 mb-2 text-center p-1">
-                <Card.Body className='text-center p-4'>
-                  <Card.Img
-                    variant="top"
-                    src={t(`montlybenefits.pic${key}`)}
-                    className="mx-auto mb-4 montly-ben-icons"
-                  />
-                  <Card.Title style={{ fontWeight: 'bold', fontSize: '24px' }} className="card-text mb-2">
-                    <span dangerouslySetInnerHTML={{ __html: t(`montlybenefits.title${key}`) }} />
-                  </Card.Title>
-                  <Card.Text className="text-content" style={{ lineHeight: '140%', fontSize: '21px', letterSpacing: '1%' }}>{t(`montlybenefits.text${key}`)}</Card.Text>
+              <Card className="monthly-benefit-card mt-2 mb-2 text-start text-lg-center p-1">
+                <Card.Body className='p-4'>
+                  <div className="d-flex flex-lg-column align-items-center align-items-lg-center justify-content-start justify-content-lg-center">
+                    <Card.Img
+                      variant="top"
+                      src={t(`montlybenefits.pic${key}`)}
+                      className="me-3 mb-2 mb-lg-4 montly-ben-icons"
+                    />
+                    <Card.Title className="card-text monthly-ben-titles mb-2 mb-lg-4">
+                      <span dangerouslySetInnerHTML={{ __html: t(`montlybenefits.title${key}`) }} />
+                    </Card.Title>
+                  </div>
+                  <Card.Text className="text-content mt-2 mt-lg-0" style={{ lineHeight: '140%', fontSize: '21px', letterSpacing: '1%' }}>
+                    {t(`montlybenefits.text${key}`)}
+                  </Card.Text>
                 </Card.Body>
               </Card>
             </Col>
@@ -36,17 +40,21 @@ const MontlyBenefits = () => {
         <Row>
           {keys.slice(3, 6).map((key) => (
             <Col sm={12} md={12} lg={4} key={key}>
-              <Card className="monthly-benefit-card mt-2 mb-2 text-center p-1">
-                <Card.Body className='text-center p-4'>
-                  <Card.Img
-                    variant="top"
-                    src={t(`montlybenefits.pic${key}`)}
-                    className="mx-auto mb-4 montly-ben-icons"
-                  />
-                  <Card.Title style={{ fontWeight: 'bold', fontSize: '24px' }} className="card-text mb-2">
-                    <span dangerouslySetInnerHTML={{ __html: t(`montlybenefits.title${key}`) }} />
-                  </Card.Title>
-                  <Card.Text className="text-content" style={{ lineHeight: '140%', fontSize: '21px', letterSpacing: '1%' }}>{t(`montlybenefits.text${key}`)}</Card.Text>
+              <Card className="monthly-benefit-card mt-2 mb-2  text-start text-lg-center p-1">
+                <Card.Body className='p-4'>
+                  <div className="d-flex flex-lg-column align-items-center align-items-lg-center justify-content-start justify-content-lg-center">
+                    <Card.Img
+                      variant="top"
+                      src={t(`montlybenefits.pic${key}`)}
+                      className="me-3 mb-2 mb-lg-4 montly-ben-icons"
+                    />
+                    <Card.Title className="card-text monthly-ben-titles mb-2 mb-lg-4">
+                      <span dangerouslySetInnerHTML={{ __html: t(`montlybenefits.title${key}`) }} />
+                    </Card.Title>
+                  </div>
+                  <Card.Text className="text-content mt-2 mt-lg-0" style={{ lineHeight: '140%', fontSize: '21px', letterSpacing: '1%' }}>
+                    {t(`montlybenefits.text${key}`)}
+                  </Card.Text>
                 </Card.Body>
               </Card>
             </Col>
@@ -55,17 +63,21 @@ const MontlyBenefits = () => {
         <Row>
           {keys.slice(6, 8).map((key) => (
             <Col sm={12} md={12} lg={6} key={key}>
-              <Card className="monthly-benefit-card mt-2 mb-2 text-center p-1">
-                <Card.Body className='text-center p-4'>
-                  <Card.Img
-                    variant="top"
-                    src={t(`montlybenefits.pic${key}`)}
-                    className="mx-auto mb-4 montly-ben-icons"
-                  />
-                  <Card.Title style={{ fontWeight: 'bold', fontSize: '24px' }} className="card-text mb-2">
-                    {t(`montlybenefits.title${key}`)}
-                  </Card.Title>
-                  <Card.Text className="text-content" style={{ lineHeight: '140%', fontSize: '21px', letterSpacing: '1%' }}>{t(`montlybenefits.text${key}`)}</Card.Text>
+              <Card className="monthly-benefit-card mt-2 mb-2 text-start text-lg-center p-1">
+                <Card.Body className='p-4'>
+                  <div className="d-flex flex-lg-column align-items-center align-items-lg-center justify-content-start justify-content-lg-center">
+                    <Card.Img
+                      variant="top"
+                      src={t(`montlybenefits.pic${key}`)}
+                      className="me-3 mb-2 mb-lg-4 montly-ben-icons"
+                    />
+                    <Card.Title className="card-text monthly-ben-titles mb-2 mb-lg-4">
+                      {t(`montlybenefits.title${key}`)}
+                    </Card.Title>
+                  </div>
+                  <Card.Text className="text-content mt-2 mt-lg-0" style={{ lineHeight: '140%', fontSize: '21px', letterSpacing: '1%' }}>
+                    {t(`montlybenefits.text${key}`)}
+                  </Card.Text>
                 </Card.Body>
               </Card>
             </Col>

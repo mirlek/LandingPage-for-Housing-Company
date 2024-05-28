@@ -51,7 +51,7 @@ const Header = () => {
               </Button>
             </div>
           </div>
-          <div className="d-flex justify-content-between align-items-baseline mt-2">
+          <div className="d-flex justify-content-between mt-2">
             <LanguageSelector />
             <OverlayTrigger
               placement="bottom"
